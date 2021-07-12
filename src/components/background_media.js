@@ -21,7 +21,14 @@ const BackgroundSection = ({
       fluid={bg_img_hd}
       backgroundColor={`#040e18`}
     >
-      <div style={{ height: h }}>
+      <div
+        style={{
+          height: h,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
         <h2>{children}</h2>
       </div>
     </BackgroundImage>
