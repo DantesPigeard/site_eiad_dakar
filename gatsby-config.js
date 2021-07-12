@@ -26,5 +26,15 @@ module.exports = {
         failOnError: true,
       },
     },
+
+    // SVG
+    {
+      resolve: "gatsby-plugin-react-svg",
+      options: {
+        rule: {
+          include: /assets/,
+        },
+      },
+    },
   ],
 };

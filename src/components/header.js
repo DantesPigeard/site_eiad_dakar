@@ -1,15 +1,20 @@
 import * as React from "react";
+import logo from "../../media/EIAD_logo.svg";
 
-const heading_style = {
-  // color: "black",
+console.log("logo", logo);
+
+// import { ReactComponent as YourSvg } from "../../media/EIAD-logo.svg";
+
+const logo_style = {
   margin: "0",
+  padding: "0.5em",
+  width: "15%",
 };
 
 export function Header() {
   return (
-    <h1 style={heading_style}>
-      EIAD DAKAR
-      <br />
-    </h1>
+    <div>
+      <img src={logo} alt="logo EIAD" style={logo_style} />
+    </div>
   );
 }
