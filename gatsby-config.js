@@ -11,6 +11,15 @@ module.exports = {
         path: `${__dirname}/media`,
       },
     },
+    // TEXT
+    `gatsby-transformer-plaintext`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `text`,
+        path: `./media/`,
+      },
+    },
 
     // IMAGE
     `gatsby-transformer-sharp`,

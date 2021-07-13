@@ -3,18 +3,24 @@ import * as React from "react";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 import BackgroundMedia from "../components/background_media";
+import { LatinText } from "../components/content_misc";
 import "../css/global.css";
 
 import { graphql, useStaticQuery } from "gatsby";
 
+// FONT
+// https://fonts.google.com/specimen/Raleway?category=Sans+Serif&preview.text=SOON&preview.text_type=custom
+// https://www.npmjs.com/package/@fontsource/raleway
+// https://www.gatsbyjs.com/docs/how-to/styling/using-web-fonts/
+
+// le bleu #066ea5
+// le jaune #feec04
+
 // // styles
 const global_style = {
-  backgroundColor: "cyan",
+  backgroundColor: "white",
   color: "white",
-  // margin: "0",
-  // padding: "1rem",
-  // border: 0,
-  fontFamily: "-apple-system, Roboto, sans-serif, serif",
+  fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
 };
 
 // markup
@@ -39,8 +45,9 @@ const IndexPage = () => {
       <BackgroundMedia normal_height="0.5" data_query={data_home}>
         Site en construction
       </BackgroundMedia>
+      <LatinText text_color="#066ea5" />
 
-      <Footer />
+      <Footer background_color="#066ea5" text_color="white" text_size="0.7em" />
     </main>
   );
 };

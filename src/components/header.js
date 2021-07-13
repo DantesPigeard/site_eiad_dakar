@@ -1,9 +1,7 @@
 import * as React from "react";
-import logo from "../../media/EIAD_logo.svg";
+import logo from "../../media/EIAD_logo_bleu.svg";
 
 console.log("logo", logo);
-
-// import { ReactComponent as YourSvg } from "../../media/EIAD-logo.svg";
 
 const logo_style = {
   margin: "0",
