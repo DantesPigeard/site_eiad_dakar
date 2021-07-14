@@ -1,0 +1,13 @@
+.h_bar {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  grid-gap: 1em;
+}
+
+.h_cell {
+  text-align: center;
+  background: white;
+  color: #066ea5;
+  font-size: 0.7em;
+}

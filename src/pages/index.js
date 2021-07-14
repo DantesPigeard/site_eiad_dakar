@@ -1,7 +1,6 @@
 import * as React from "react";
 
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
+import { Layout } from "../components/layout";
 import BackgroundMedia from "../components/background_media";
 import { LatinText } from "../components/content_misc";
 import "../css/global.css";
@@ -17,11 +16,11 @@ import { graphql, useStaticQuery } from "gatsby";
 // le jaune #feec04
 
 // // styles
-const global_style = {
-  backgroundColor: "white",
-  color: "white",
-  fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
-};
+// const global_style = {
+//   backgroundColor: "white",
+//   color: "white",
+//   fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
+// };
 
 // markup
 const IndexPage = () => {
@@ -40,15 +39,12 @@ const IndexPage = () => {
   );
 
   return (
-    <main style={global_style}>
-      <Header />
+    <Layout>
       <BackgroundMedia normal_height="0.5" data_query={data_home}>
         Site en construction
       </BackgroundMedia>
       <LatinText text_color="#066ea5" />
-
-      <Footer background_color="#066ea5" text_color="white" text_size="0.7em" />
-    </main>
+    </Layout>
   );
 };
 

@@ -1,0 +1,16 @@
+.f_bar {
+  background: #066ea5;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: 50%, 25%, 25%; */
+  /* grid-template-columns: 2fr, 1fr, 1fr; */
+  align-items: center;
+  /* grid-gap: 1em; */
+}
+
+.f_cell {
+  text-align: center;
+  background: #066ea5;
+  color: white;
+  font-size: 0.7em;
+}

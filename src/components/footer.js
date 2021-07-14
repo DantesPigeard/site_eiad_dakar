@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import "../css/footer.css";
+
 const links = [
   {
     content:
@@ -17,38 +19,30 @@ const links = [
   },
 ];
 
-export function Footer({ background_color, text_size, text_color }) {
-  const link_style = {
-    background: background_color,
-    color: text_color,
-    fontSize: text_size,
-    margin: 0,
-    padding: "1em",
-  };
-
-  const footer_style = {
-    display: "flex",
-    justifyContent: "space-between",
-    background: background_color,
+export function Footer() {
+  const font_style = {
+    fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
+    fontWeight: "normal",
+    color: "#066ea5",
   };
 
   return (
-    <div>
-      <div style={footer_style}>
-        {links.map((link) => (
-          <div key={link.url} style={link_style}>
-            <p>{link.content}</p>
+    <div className="f_bar" style={font_style}>
+      {links.map((elem) => (
+        // <div>{elem.content}</div>
+        <section className="f_cell">
+          <div key={elem.url}>
+            <p>{elem.content}</p>
             <a
-              style={link_style}
               rel="noreferrer"
-              href={`${link.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
+              href={`${elem.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
               target={"_blank"}
             >
-              {link.text}
+              {elem.text}
             </a>
           </div>
-        ))}
-      </div>
+        </section>
+      ))}
     </div>
   );
 }
