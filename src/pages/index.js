@@ -12,15 +12,10 @@ import { graphql, useStaticQuery } from "gatsby";
 // https://www.npmjs.com/package/@fontsource/raleway
 // https://www.gatsbyjs.com/docs/how-to/styling/using-web-fonts/
 
-// le bleu #066ea5
+// CHARTE COULEUR
+// bleu juliette #066ea5
+// bleu clair #a3d0eb
 // le jaune #feec04
-
-// // styles
-// const global_style = {
-//   backgroundColor: "white",
-//   color: "white",
-//   fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
-// };
 
 // markup
 const IndexPage = () => {

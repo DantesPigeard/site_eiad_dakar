@@ -1,8 +1,9 @@
 .h_bar {
+  width: 400px;
+  padding: 0.8em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
-  grid-gap: 1em;
 }
 
 .h_cell {
@@ -10,4 +11,8 @@
   background: white;
   color: #066ea5;
   font-size: 0.7em;
+}
+
+.logo_style {
+  width: 80%;
 }

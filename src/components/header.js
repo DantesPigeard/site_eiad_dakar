@@ -33,7 +33,9 @@ export function Header() {
     <div className="h_bar" style={font_style}>
       <section className="h_cell">
         <Button where="/">
-          <img src={logo} alt="logo EIAD" />
+          <div className="logo_style">
+            <img src={logo} alt="logo EIAD" />
+          </div>
         </Button>
       </section>
       <section className="h_cell">

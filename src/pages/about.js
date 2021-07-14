@@ -1,14 +1,13 @@
 import * as React from "react";
 
 import { Layout } from "../components/layout";
+import { LatinText } from "../components/content_misc";
 
 // markup
 const About = () => {
   return (
     <Layout>
-      <div style={{ color: "red" }}>
-        À propos et en parlant de ça tu as pensé à t'inscrire pour la rentrée ?
-      </div>
+      <LatinText text_color="#066ea5" />
     </Layout>
   );
 };
