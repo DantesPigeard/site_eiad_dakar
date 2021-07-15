@@ -1,5 +1,5 @@
 .h_bar {
-  width: 400px;
+  width: 600px;
   padding: 0.8em;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -11,8 +11,12 @@
   background: white;
   color: #066ea5;
   font-size: 0.7em;
+  cursor: auto;
 }
+/* .h_cell.pointer {
+  cursor: pointer;
+} */
 
 .logo_style {
-  width: 80%;
+  width: 100%;
 }

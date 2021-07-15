@@ -1,15 +1,29 @@
 .f_bar {
   background: #066ea5;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  align-items: center;
+
+  /* grid-template-columns: 50%, 25%, 25%; */
+  /* grid-template-columns: 4fr 1fr 1fr; */
+  /* grid-template-columns: repeat(auto-fill, 1fr); */
+  padding: 0.4em;
+  grid-template-columns: repeat(4, 1fr);
+  /* align-items: top; */
+  gap: 0.4em;
+  grid-template-areas: ". a b .";
 }
 
-.f_cell {
-  text-align: center;
-  background: #066ea5;
-  color: white;
-  font-size: 0.7em;
+.f_cell_a {
+  grid-area: a;
+  /* text-align: left; */
+  align-self: center;
+  justify-self: right;
+}
+
+.f_cell_b {
+  grid-area: b;
+  /* text-align: right; */
+  align-self: center;
+  justify-self: left;
 }
 
 a:link {

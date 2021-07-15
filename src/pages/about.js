@@ -3,6 +3,7 @@ import * as React from "react";
 import { Layout } from "../components/layout";
 import { LatinText } from "../components/content_misc";
 
+
 // markup
 const About = () => {
   return (

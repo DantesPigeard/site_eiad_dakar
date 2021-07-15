@@ -35,5 +35,19 @@ module.exports = {
         failOnError: true,
       },
     },
+
+    // MANIFEST
+    {
+      resolve: `gatsby-plugin-manifest`,
+      options: {
+        name: `EIAD`,
+        short_name: `EIAD`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: `media/icon.png`,
+      },
+    },
   ],
 };

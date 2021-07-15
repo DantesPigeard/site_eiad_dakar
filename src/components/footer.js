@@ -1,48 +1,39 @@
 import * as React from "react";
-
+import { navigate } from "gatsby";
 import "../css/footer.css";
 
-const links = [
-  {
-    content:
-      "École internationale d'acteur.trice.s de Dakar - 4, rue Mariton 93400 Saint-Ouen-sur-Seine - France",
-  },
-  {
-    text: "Juliette Nicot",
-    url: "http://www.juliettenicot.com/",
-    content: "Graphisme",
-  },
-  {
-    text: "Stanislas Marçais",
-    url: "https://www.knupel.art",
-    content: "Développement",
-  },
-];
+function LinkPage({ class_name, where, children }) {
+  const where_are_you_going = (event) => {
+    event.preventDefault();
+    if (typeof where === "string" || where instanceof String) {
+      if (where === "/back") {
+        navigate(-1);
+      } else {
+        navigate(where);
+      }
+    }
+  };
+  return (
+    <div className={class_name} onClick={where_are_you_going}>
+      {children}
+    </div>
+  );
+}
 
 export function Footer() {
   const font_style = {
     fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
     fontWeight: "normal",
-    color: "#066ea5",
+    color: "white",
+    fontSize: "0.7em",
   };
 
   return (
     <div className="f_bar" style={font_style}>
-      {links.map((elem) => (
-        // <div>{elem.content}</div>
-        <section className="f_cell">
-          <div key={elem.url}>
-            <p>{elem.content}</p>
-            <a
-              rel="noreferrer"
-              href={`${elem.url}?utm_source=starter&utm_medium=start-page&utm_campaign=minimal-starter`}
-              target={"_blank"}
-            >
-              {elem.text}
-            </a>
-          </div>
-        </section>
-      ))}
+      <div className="f_cell_a">Copyright © 2021 EIAD |</div>
+      <LinkPage class_name="f_cell_b" where="/legal">
+        Mentions légales
+      </LinkPage>
     </div>
   );
 }

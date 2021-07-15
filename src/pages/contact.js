@@ -3,18 +3,18 @@ import * as React from "react";
 import { Layout } from "../components/layout";
 import { Form } from "../components/form";
 
-// https://www.gatsbyjs.com/docs/building-a-contact-form/
-
-// Il y a un gestionnaire de pourriel sur Netlify
-// https://docs.netlify.com/forms/setup/
+import "../css/form.css";
 
 // markup
 const Contact = () => {
   return (
     <Layout>
-      <Form name="contact">
-        Un petit message pour contacter l'école c'est ici.
-      </Form>
+      <div className="container">
+        <div>Nous conctater, c'est par ici !</div>
+        <Form name="contact">
+          Un petit message pour contacter l'école c'est ici.
+        </Form>
+      </div>
     </Layout>
   );
 };
