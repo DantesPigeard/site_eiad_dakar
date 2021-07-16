@@ -1,0 +1,26 @@
+.container {
+  padding: 1em;
+  color: #066ea5;
+}
+
+.elem {
+  padding-left: 0.3em;
+}
+input {
+  box-sizing: border-box;
+  padding: 0.3em;
+  margin: 0.3em;
+}
+input[type="text"] {
+  width: 25em;
+}
+
+input[type="email"] {
+  width: 20em;
+}
+
+textarea {
+  margin: 0.3em;
+  width: 25em;
+  height: 10em;
+}

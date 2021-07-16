@@ -1,0 +1,8 @@
+body {
+  /* margin: 0; */
+  background: white;
+  /* 
+  not possible to passe font loaded from somewhere here, maybe is due to step of page elements loading
+  font-family: Raleway, -apple-system, Roboto, sans-serif, serif;
+  font-weight: normal; */
+}
