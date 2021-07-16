@@ -11,7 +11,7 @@
   background: white;
   color: #066ea5;
   font-size: 0.7em;
-  cursor: auto;
+  /* cursor: auto; */
 }
 /* .h_cell.pointer {
   cursor: pointer;
