@@ -11,7 +11,7 @@ const Inscription = () => {
     <Layout>
       <div className="container">
         <div>Pour t'inscrire envois nous toutes les infos...</div>
-        <Form name="inscription">
+        <Form name="inscription" add_file_is={true}>
           Tu veux t'inscrire à l'Eiad, explique nous cela ici en quelques mots.
         </Form>
       </div>
