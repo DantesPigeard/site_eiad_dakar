@@ -7,7 +7,21 @@ import "../css/form.css";
 // Les formulaires sont à récuprer sur le site de netlify dans le compte correspondant au site.
 // https://docs.netlify.com/forms/setup/
 // https: www.netlify.com/blog/2017/07/20/how-to-integrate-netlifys-form-handling-in-a-react-app/#form-handling-with-static-site-generators
-export function Form({ name, children }) {
+export function Form({ name, children, add_file_is }) {
+  const add_file = () => {
+    return (
+      <div>
+        <div>Ajoutez votre CV au format PDF</div>
+        <div>
+          <label>
+            <input type="file" name="pdf" />
+          </label>
+        </div>
+      </div>
+    );
+  };
+
+  // RESULT
   return (
     <form name={name} method="POST" data-netlify="true">
       <input type="hidden" name="form-name" value={name} />
@@ -26,6 +40,7 @@ export function Form({ name, children }) {
           <input type="email" name="email" placeHolder="courriel" />
         </label>
       </div>
+      <div>{add_file_is ? <div>{add_file()}</div> : <></>}</div>
       <div>
         <label>
           <textarea name="message" placeHolder={children}></textarea>

@@ -30,7 +30,7 @@ export function Footer() {
 
   return (
     <div className="f_bar" style={font_style}>
-      <div className="f_cell_a">Copyright © 2021 EIAD |</div>
+      {/* <div className="f_cell_a">Copyright © 2021 EIAD |</div> */}
       <LinkPage class_name="f_cell_b" where="/legal">
         Mentions légales
       </LinkPage>
