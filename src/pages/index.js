@@ -36,9 +36,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <BackgroundMedia normal_height="0.5" data_query={data_home}>
-        Site en construction
+        APPEL À CANDIDATURES JUSQU'AU 22 AOÛT
       </BackgroundMedia>
-      <LatinText text_color="#066ea5" />
+      {/* <LatinText text_color="#066ea5" /> */}
     </Layout>
   );
 };
