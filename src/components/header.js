@@ -38,13 +38,13 @@ export function Header() {
           </div>
         </Button>
       </section>
-      {/* <section className="h_cell">
-        <Button where="/inscription">s'inscrire</Button>
-      </section> */}
       <section className="h_cell">
-        <Button where="/contact">contact</Button>
+        <Button where="/inscription">s'inscrire</Button>
       </section>
       {/* <section className="h_cell">
+        <Button where="/contact">contact</Button>
+      </section>
+      <section className="h_cell">
         <Button where="/about">à propos</Button>
       </section> */}
     </div>

@@ -6,6 +6,27 @@
 .elem {
   padding-left: 0.3em;
 }
+
+.partenaire {
+  width: 800px;
+  /* height: auto; */
+}
+
+/* Très moche de mettre ça la... mais c'est provisoire à retirer */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.md_style {
+  font-size: 0.8em;
+  background: #066ea5;
+  margin: 0 auto;
+  padding: 1em;
+  /* max-width: 960px; */
+  /* padding: 1.45rem 1.0875rem; */
+}
+
 input {
   box-sizing: border-box;
   padding: 0.3em;

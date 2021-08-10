@@ -21,6 +21,18 @@ module.exports = {
       },
     },
 
+    // MARKDOWN
+    // https://dev.to/alexalexyang/how-to-use-markdown-in-pages-in-gatsby-5dee
+    // https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/media/markdown`,
+        name: `markdown`,
+      },
+    },
+    `gatsby-transformer-remark`,
+
     // IMAGE
     `gatsby-transformer-sharp`,
     {
