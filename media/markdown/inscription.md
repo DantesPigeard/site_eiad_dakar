@@ -34,7 +34,7 @@ Ces travaux donneront lieu à des présentations publiques à l’issue de chaqu
 
 ## Avant le 22 août 2021
 
-Adressez à Adama Diop et Jean-Pierre Baro un texte présentant votre parcours et exposant les motivations de votre participation à cet atelier. Dites-nous où vous en êtes dans votre parcours d’acteur ou d’actrice et ce que vous attendez de votre participation à cet atelier. Envoyez ce texte par mail à : dakar.eiad@gmail.com
+Adressez à Adama Diop et Jean-Pierre Baro un texte présentant votre parcours et exposant les motivations de votre participation à cet atelier. Dites-nous où vous en êtes dans votre parcours d’acteur ou d’actrice et ce que vous attendez de votre participation à cet atelier. Envoyez ce texte par mail à : ateliers@eiad-dakar.com
 
 ## Pour les auditions des 26 et 27 août 2021
 
@@ -45,5 +45,3 @@ Le lieu où se dérouleront les auditions des 26 et 27 août vous sera précisé
 ## Informations et contact
 
 Pour toute information complémentaire, n’hésitez pas à nous appeler ou à nous laisser un message par WhatsApp au +221 77 101 24 51 ou au +33 6 01 98 98 97. Vous pouvez également nous poser vos questions à l’adresse mail suivante : dakar.eiad@gmail.com
-
-www.eiad-dakar.com www.facebook.com/eiad.dakar

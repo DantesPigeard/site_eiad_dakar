@@ -3,7 +3,17 @@ module.exports = {
     siteUrl: `https://www.eiad-dakar.com`,
   },
   plugins: [
-    // FILE
+    // FILE SYSTEM
+
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `partenaires`,
+        path: `${__dirname}/media/partenaires`,
+        ignore: [`**/\.*`], // ignore files starting with a dot
+      },
+    },
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -11,6 +21,7 @@ module.exports = {
         path: `${__dirname}/media`,
       },
     },
+
     // TEXT
     `gatsby-transformer-plaintext`,
     {

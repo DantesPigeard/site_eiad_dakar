@@ -20,7 +20,11 @@ function Button({ where, children }) {
     }
   };
 
-  return <div onClick={where_are_you_going}>{children}</div>;
+  return (
+    <div className="button_style" onClick={where_are_you_going}>
+      {children}
+    </div>
+  );
 }
 
 export function Header() {
@@ -39,7 +43,9 @@ export function Header() {
         </Button>
       </section>
       <section className="h_cell">
-        <Button where="/inscription">s'inscrire</Button>
+        <Button where="/inscription">
+          <div className="h_text">s'inscrire</div>
+        </Button>
       </section>
       {/* <section className="h_cell">
         <Button where="/contact">contact</Button>
