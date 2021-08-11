@@ -20,7 +20,11 @@ function Button({ where, children }) {
     }
   };
 
-  return <div onClick={where_are_you_going}>{children}</div>;
+  return (
+    <div className="button_style" onClick={where_are_you_going}>
+      {children}
+    </div>
+  );
 }
 
 export function Header() {

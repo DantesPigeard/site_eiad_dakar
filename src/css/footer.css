@@ -1,28 +1,23 @@
 .f_bar {
   background: #066ea5;
-  display: grid;
-  padding: 0.4em;
-
-  gap: 0.4em;
-  /* grid-template-columns: repeat(4, 1fr); */
-  /* grid-template-areas: ". a b ."; */
-
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: ". b .";
+  display: flex;
 }
 
-.f_cell_a {
-  grid-area: a;
-  /* text-align: left; */
+.text {
+  padding: 0 1em;
   align-self: center;
-  justify-self: right;
+  justify-self: center;
+  cursor: pointer;
 }
 
-.f_cell_b {
-  grid-area: b;
-  /* text-align: right; */
-  align-self: center;
-  justify-self: left;
+.picto {
+  width: 25px;
+  transform: translate(12%, 25%);
+  filter: invert(100%);
+}
+.picto_container {
+  width: 30px;
+  height: 40px;
 }
 
 a:link {

@@ -1,26 +1,32 @@
 import React from "react";
 import { Layout } from "../components/layout";
+import { Partenaires } from "../components/partenaires";
 import { graphql } from "gatsby";
+
+import Img from "gatsby-image";
+
 import "../css/form.css";
 
-import BackgroundMedia from "../components/background_media";
-
-import partenaires from "../../media/partenaires.jpg";
-
 export default function Inscription({ data }) {
-  return (
-    <>
-      <Layout>
-        <div
-          className="md_style"
-          dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
-        />
-        <div className="partenaire">
-          <img src={partenaires} alt="partenaires" />
-        </div>
-      </Layout>
-    </>
-  );
+  if (data !== undefined) {
+    return (
+      <>
+        <Layout>
+          <div
+            className="md_style"
+            dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }}
+          />
+          <Partenaires />
+        </Layout>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <Layout />
+      </>
+    );
+  }
 }
 
 export const query = graphql`

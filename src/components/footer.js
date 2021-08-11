@@ -2,6 +2,20 @@ import * as React from "react";
 import { navigate } from "gatsby";
 import "../css/footer.css";
 
+import picto_facebook from "../../media/picto/facebook_2021.svg";
+
+function ButtonPicto({ src, cssPicto, cssPictoContainer, alt, href }) {
+  return (
+    <div className={cssPictoContainer}>
+      <div className={cssPicto}>
+        <a href={href} target="_blank">
+          <img src={src} alt={alt} />
+        </a>
+      </div>
+    </div>
+  );
+}
+
 function LinkPage({ class_name, where, children }) {
   const where_are_you_going = (event) => {
     event.preventDefault();
@@ -31,9 +45,17 @@ export function Footer() {
   return (
     <div className="f_bar" style={font_style}>
       {/* <div className="f_cell_a">Copyright © 2021 EIAD |</div> */}
-      <LinkPage class_name="f_cell_b" where="/legal">
+
+      <LinkPage class_name="text" where="/legal">
         Mentions légales
       </LinkPage>
+      <ButtonPicto
+        src={picto_facebook}
+        cssPicto="picto"
+        cssPictoContainer="picto_container"
+        alt="facebook"
+        href="https://www.facebook.com/eiad.dakar"
+      />
     </div>
   );
 }
