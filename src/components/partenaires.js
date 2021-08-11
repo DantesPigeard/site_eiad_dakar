@@ -38,8 +38,7 @@ export function Partenaires() {
       }
     `
   );
-  console.log("allFile", allFile);
-  console.log("allFile.edges", allFile.edges);
+
   return (
     <div>
       <div style={{ position: "relative" }}>
