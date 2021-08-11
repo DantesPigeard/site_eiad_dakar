@@ -43,7 +43,9 @@ export function Header() {
         </Button>
       </section>
       <section className="h_cell">
-        <Button where="/inscription">s'inscrire</Button>
+        <Button where="/inscription">
+          <div className="h_text">s'inscrire</div>
+        </Button>
       </section>
       {/* <section className="h_cell">
         <Button where="/contact">contact</Button>
