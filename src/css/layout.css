@@ -6,3 +6,17 @@ body {
   font-family: Raleway, -apple-system, Roboto, sans-serif, serif;
   font-weight: normal; */
 }
+
+.md_style {
+  font-size: 0.8em;
+  background: #066ea5;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 650px;
+  text-align: justify;
+}
+
+.md_container {
+  background: #066ea5;
+  border-bottom: 1px solid white;
+}
