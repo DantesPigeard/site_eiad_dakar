@@ -18,15 +18,6 @@ img {
   height: auto;
 }
 
-.md_style {
-  font-size: 0.8em;
-  background: #066ea5;
-  margin: 0 auto;
-  padding: 1em;
-  /* max-width: 960px; */
-  /* padding: 1.45rem 1.0875rem; */
-}
-
 input {
   box-sizing: border-box;
   padding: 0.3em;

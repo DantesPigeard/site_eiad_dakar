@@ -34,25 +34,26 @@ export function Header() {
     color: "#066ea5",
   };
   return (
-    <div className="h_bar" style={font_style}>
-      <section className="h_cell">
+    <div className="h_bar">
+      <div className="h_bar_logo">
         <Button where="/">
           <div className="logo_style">
             <img src={logo} alt="logo EIAD" />
           </div>
         </Button>
-      </section>
-      <section className="h_cell">
-        <Button where="/inscription">
-          <div className="h_text">s'inscrire</div>
-        </Button>
-      </section>
-      {/* <section className="h_cell">
-        <Button where="/contact">contact</Button>
-      </section>
-      <section className="h_cell">
-        <Button where="/about">à propos</Button>
-      </section> */}
+      </div>
+      <div className="h_bar_text" style={font_style}>
+        <div className="h_cell">
+          <Button where="/inscription">
+            <div className="h_text">s'inscrire</div>
+          </Button>
+        </div>
+        <div className="h_cell">
+          <Button where="/about">
+            <div className="h_text">à propos</div>
+          </Button>
+        </div>
+      </div>
     </div>
   );
 }
