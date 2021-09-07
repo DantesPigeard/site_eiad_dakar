@@ -9,7 +9,7 @@ const BackgroundSection = ({
   children,
   normal_height,
   data_query,
-  className,
+  style_txt,
 }) => {
   const h = useCanvas().height * normal_height;
   const bg_img_hd = data_query.bg_hd.childImageSharp.fluid;
@@ -17,11 +17,12 @@ const BackgroundSection = ({
   return (
     <BackgroundImage
       Tag="section"
-      className={className}
+      // className={class_name_img}
       fluid={bg_img_hd}
       backgroundColor={`#040e18`}
     >
       <div
+        // className={class_name_txt}
         style={{
           height: h,
           display: "flex",
@@ -29,7 +30,8 @@ const BackgroundSection = ({
           alignItems: "center",
         }}
       >
-        <h2>{children}</h2>
+        <div className={style_txt}>{children}</div>
+        {/* <h2>{children}</h2> */}
       </div>
     </BackgroundImage>
   );
