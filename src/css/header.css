@@ -1,5 +1,6 @@
 .button_style {
   cursor: pointer;
+  min-width: 100px;
 }
 .h_bar {
   display: flex;
@@ -32,4 +33,10 @@
 
 .logo_style {
   width: 100%;
+}
+
+@media (max-width: 600px) {
+  .h_text {
+    font-size: 0.8em;
+  }
 }
