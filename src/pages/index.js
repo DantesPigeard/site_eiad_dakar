@@ -1,11 +1,12 @@
+// REACT
 import * as React from "react";
-
+// GATSBY
+import { graphql, useStaticQuery } from "gatsby";
+// EIAD
 import { Layout } from "../components/layout";
 import BackgroundMedia from "../components/background_media";
 import { LatinText } from "../components/content_misc";
 import "../css/global.css";
-
-import { graphql, useStaticQuery } from "gatsby";
 
 // FONT
 // https://fonts.google.com/specimen/Raleway?category=Sans+Serif&preview.text=SOON&preview.text_type=custom
@@ -19,7 +20,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 // markup
 const IndexPage = () => {
-  const data_home = useStaticQuery(
+  const bg_home = useStaticQuery(
     graphql`
       query {
         bg_hd: file(relativePath: { eq: "fond_rose_tete.jpg" }) {
@@ -36,8 +37,9 @@ const IndexPage = () => {
   return (
     <Layout>
       <BackgroundMedia
-        normal_height="0.5"
-        data_query={data_home}
+        // height="200px"
+        height="0.5n"
+        data_query={bg_home}
         style_txt="bg_img_txt"
       >
         APPEL À CANDIDATURES JUSQU'AU 22 AOÛT

@@ -11,11 +11,18 @@ export function Layout({ children }) {
     fontWeight: "normal",
     color: "white",
   };
+
+  const frame_width = 1200;
+  const frame_style = {
+    maxWidth: frame_width + "px",
+    margin: "0 auto",
+  };
+
   return (
-    <>
-      <Header />
+    <div style={frame_style}>
+      <Header max_width={frame_width + "px"} />
       <main style={font_style}>{children}</main>
       <Footer />
-    </>
+    </div>
   );
 }
