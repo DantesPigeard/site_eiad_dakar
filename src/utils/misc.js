@@ -1,6 +1,6 @@
 /**
  * UTILS MISC
- * v 0.1.1
+ * v 0.1.2
  * 2021-2021
  * */
 
@@ -14,21 +14,21 @@ export function get_lang() {
   return lang;
 }
 
-export function find_lang(arr, target, lang) {
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i].name === target) {
-      if (lang === "en") return arr[i].label_en;
-      else return arr[i].label_fr;
+export function find_lang(content_arr, name, lang) {
+  for (let i = 0; i < content_arr.length; i++) {
+    if (content_arr[i].name === name) {
+      if (lang === "en") return content_arr[i].label_en;
+      else return content_arr[i].label_fr;
     }
   }
   return null;
 }
 
-export function content_by_lang(content_arr, what, nothing_match) {
+export function content_by_lang(content_arr, name, nothing_match) {
   if (get_lang() === "fr") {
-    return find_lang(content_arr, what, "fr");
+    return find_lang(content_arr, name, "fr");
   } else if (get_lang() === "en") {
-    return find_lang(content_arr, what, "en");
+    return find_lang(content_arr, name, "en");
   }
   return nothing_match;
 }
@@ -41,3 +41,4 @@ export function str_unit_to_number(unit, str) {
     return res;
   } else return null;
 }
+

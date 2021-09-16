@@ -1,19 +1,11 @@
 .button_style {
   cursor: pointer;
-  min-width: 100px;
 }
 
-/* .h_bar {
-  width: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-} */
-
 .h_bar_logo {
-  width: 150px;
+  width: 160px;
   padding-top: 0.4em;
-  padding-left: 0.4em;
+  padding-left: 1em;
 }
 
 .h_bar_text {
@@ -21,15 +13,16 @@
 }
 
 .h_text {
-  padding-top: 0.8em;
+  font-size: 0.8em;
+  padding-top: 1.4em;
 }
 
 .h_cell {
   text-align: center;
   background: white;
   color: #066ea5;
-  font-size: 0.8em;
-  padding: 0.3em;
+
+  padding-right: 1em;
   background: rgba(0, 0, 0, 0);
 }
 
@@ -39,6 +32,11 @@
 
 @media (max-width: 600px) {
   .h_text {
+    padding-top: 0.8em;
     font-size: 0.7em;
+  }
+
+  .h_cell {
+    padding-right: 0.5em;
   }
 }

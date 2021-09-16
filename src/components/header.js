@@ -8,12 +8,13 @@ import { graphql, useStaticQuery } from "gatsby";
 // UTILS
 import { useCanvas } from "../hook/hook";
 import BackgroundMedia from "../components/background_media";
+// import { str_unit_to_number } from "../utils/misc";
 // EIAD
 import logo from "../../media/EIAD_logo_bleu.svg";
+import "../css/header.css";
+
 // le bleu #066ea5
 // le jaune #feec04
-
-import "../css/header.css";
 
 function Button({ where, children }) {
   const where_are_you_going = (event) => {
@@ -46,13 +47,15 @@ export function Header({ max_width }) {
     w = max_width;
   }
 
-  // console.log("frame width", w, max_width);
   const style_h_bar = {
     width: w + "px",
+    // maxWidth: max_width + "px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
   };
+
+  console.log("style_h_bar", style_h_bar);
 
   const bg_header = useStaticQuery(
     graphql`

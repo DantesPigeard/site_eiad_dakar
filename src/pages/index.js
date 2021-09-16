@@ -37,13 +37,10 @@ const IndexPage = () => {
   return (
     <Layout>
       <BackgroundMedia
-        // height="200px"
         height="0.5n"
         data_query={bg_home}
         style_txt="bg_img_txt"
-      >
-        APPEL À CANDIDATURES JUSQU'AU 22 AOÛT
-      </BackgroundMedia>
+      ></BackgroundMedia>
       {/* <LatinText text_color="#066ea5" /> */}
     </Layout>
   );

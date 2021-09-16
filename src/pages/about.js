@@ -43,12 +43,3 @@ export default function About() {
     );
   }
 }
-// const About = () => {
-//   return (
-//     <Layout>
-//       <LatinText text_color="#066ea5" />
-//     </Layout>
-//   );
-// };
-
-// export default About;

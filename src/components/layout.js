@@ -20,9 +20,9 @@ export function Layout({ children }) {
 
   return (
     <div style={frame_style}>
-      <Header max_width={frame_width + "px"} />
+      <Header max_width={frame_width} />
       <main style={font_style}>{children}</main>
-      <Footer />
+      <Footer max_width={frame_width} />
     </div>
   );
 }

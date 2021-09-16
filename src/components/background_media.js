@@ -14,7 +14,6 @@ import { str_unit_to_number } from "../utils/misc";
  */
 
 function height_calc(value, str) {
-  // console.log("background_media", str);
   if (str !== undefined) {
     if (str.includes("px")) {
       return Math.floor(str_unit_to_number("px", str));
@@ -30,13 +29,11 @@ function height_calc(value, str) {
 }
 
 // https://www.gatsbyjs.com/plugins/gatsby-background-image/
-
 const BackgroundSection = ({ children, height, data_query, style_txt }) => {
   let h = useCanvas().height;
   if (height !== undefined) {
     h = height_calc(h, height);
   }
-  // let h = useCanvas().height * height;
   const bg_img_hd = data_query.bg_hd.childImageSharp.fluid;
 
   return (
