@@ -1,6 +1,5 @@
 // REACT
 import * as React from "react";
-import { Link } from "react-router-dom";
 // GATSBY
 import { navigate } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
