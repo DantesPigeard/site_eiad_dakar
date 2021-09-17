@@ -37,7 +37,8 @@ function Button({ where, children }) {
 
 export function Header({ max_width }) {
   const font_style = {
-    fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
+    // fontFamily: "Roboto, serif",
+    // fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
     fontWeight: "normal",
     color: "#066ea5",
   };
@@ -84,12 +85,16 @@ export function Header({ max_width }) {
         <div className="h_bar_text" style={font_style}>
           <div className="h_cell">
             <Button where="/about">
-              <div className="h_text">À PROPOS</div>
+              <div className="h_text">
+                <strong>À PROPOS</strong>
+              </div>
             </Button>
           </div>
           <div className="h_cell">
             <Button where="/inscription">
-              <div className="h_text">S'INSCRIRE À EIAD-NOMAD</div>
+              <div className="h_text">
+                <strong>S'INSCRIRE À EIAD-NOMAD</strong>
+              </div>
             </Button>
           </div>
         </div>

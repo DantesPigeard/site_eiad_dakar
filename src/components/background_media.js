@@ -29,7 +29,13 @@ function height_calc(value, str) {
 }
 
 // https://www.gatsbyjs.com/plugins/gatsby-background-image/
-const BackgroundSection = ({ children, height, data_query, style_txt }) => {
+const BackgroundSection = ({
+  children,
+  height,
+  data_query,
+  style,
+  className,
+}) => {
   let h = useCanvas().height;
   if (height !== undefined) {
     h = height_calc(h, height);
@@ -50,7 +56,9 @@ const BackgroundSection = ({ children, height, data_query, style_txt }) => {
           alignItems: "center",
         }}
       >
-        <div className={style_txt}>{children}</div>
+        <div style={style} className={className}>
+          {children}
+        </div>
       </div>
     </BackgroundImage>
   );

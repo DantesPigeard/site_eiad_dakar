@@ -1,24 +1,14 @@
 .f_bar_stan {
   background: rgba(0, 0, 0, 0);
-  /* background: #066ea5; */
   display: flex;
 }
 
-/* .f_bar_ju {
-  background: rgba(0, 0, 0, 0);
-  display: flex;
-} */
-
 .f_group_ju_1 {
-  /* background: #066ea5; */
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  /* width: 100%; */
   text-align: center;
-  /* min-height: 400px; */
-  /* background-color: green; */
   align-items: center;
   padding-left: 40%;
 }
@@ -26,7 +16,6 @@
 .f_group_ju_2 {
   padding-right: 0.5em;
   padding-top: 60px;
-  /*  */
 }
 
 .text {
@@ -42,13 +31,6 @@
   width: 25px;
   filter: invert(100%);
 }
-
-/* .picto {
-  width: 25px;
-  transform: translate(12%, 25%);
-  filter: invert(25%) sepia(99%) saturate(1213%) hue-rotate(176deg)
-    brightness(100%) contrast(95%);
-} */
 
 .picto_container {
   width: 30px;

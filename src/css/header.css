@@ -1,3 +1,5 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"); */
+
 .button_style {
   cursor: pointer;
 }
@@ -10,10 +12,11 @@
 
 .h_bar_text {
   display: flex;
+  font-family: "Raleway", -apple-system, Roboto, sans-serif, serif;
+  font-size: 1em;
 }
 
 .h_text {
-  font-size: 0.8em;
   padding-top: 1.4em;
 }
 

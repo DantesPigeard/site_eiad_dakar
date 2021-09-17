@@ -10,33 +10,34 @@ import { style } from "../utils/hex_color_to_css_filter";
 // EIAD
 import "../css/footer.css";
 import picto_facebook from "../../media/picto/facebook_2021.svg";
+
 // le bleu #066ea5
 // le jaune #feec04
 
-function FooterStan({ font_style, picto_facebook, picto_style }) {
-  return (
-    <div>
-      <div className="f_bar_stan" style={font_style}>
-        <a className="text" href="mailto:dakar.eiad@gmail.com">
-          CONTACTEZ-NOUS option direct email
-        </a>
-        <LinkPage class_name="text" where="/contact">
-          CONTACTEZ-NOUS option via formulaire
-        </LinkPage>
-        <ButtonPicto
-          src={picto_facebook}
-          stylePicto={picto_style}
-          classNameContainer="picto_container"
-          alt="facebook"
-          href="https://www.facebook.com/eiad.dakar"
-        />
-        <LinkPage class_name="text" where="/legal">
-          MENTIONS LÉGALES
-        </LinkPage>
-      </div>
-    </div>
-  );
-}
+// function FooterStan({ font_style, picto_facebook, picto_style }) {
+//   return (
+//     <div>
+//       <div className="f_bar_stan" style={font_style}>
+//         <a className="text" href="mailto:dakar.eiad@gmail.com">
+//           CONTACTEZ-NOUS direct email
+//         </a>
+//         <LinkPage class_name="text" where="/contact">
+//           CONTACTEZ-NOUS via formulaire
+//         </LinkPage>
+//         <ButtonPicto
+//           src={picto_facebook}
+//           stylePicto={picto_style}
+//           classNameContainer="picto_container"
+//           alt="facebook"
+//           href="https://www.facebook.com/eiad.dakar"
+//         />
+//         <LinkPage class_name="text" where="/legal">
+//           MENTIONS LÉGALES
+//         </LinkPage>
+//       </div>
+//     </div>
+//   );
+// }
 
 function FooterJu({ picto_facebook, picto_style, max_width }) {
   let w = useCanvas().width;
@@ -68,14 +69,12 @@ function FooterJu({ picto_facebook, picto_style, max_width }) {
 
   return (
     <div style={f_bar_ju}>
-      {/* <div style={font_style} className="f_bar_ju"> */}
-      {/* <div className="f_group_ju_1" style={f_group_ju_1}> */}
       <div style={f_group_ju_1}>
         <a className="text" href="mailto:dakar.eiad@gmail.com">
-          CONTACTEZ-NOUS option direct email
+          <strong>CONTACTEZ-NOUS direct email</strong>
         </a>
         <LinkPage class_name="text" where="/contact">
-          CONTACTEZ-NOUS option via formulaire
+          <strong>CONTACTEZ-NOUS via formulaire</strong>
         </LinkPage>
         <ButtonPicto
           src={picto_facebook}
@@ -87,7 +86,7 @@ function FooterJu({ picto_facebook, picto_style, max_width }) {
       </div>
       <div className="f_group_ju_2">
         <LinkPage class_name="text" where="/legal">
-          MENTIONS LÉGALES
+          <strong>MENTIONS LÉGALES</strong>
         </LinkPage>
       </div>
     </div>
@@ -162,8 +161,6 @@ export function Footer({ max_width }) {
     fontSize: "0.7em",
   };
 
-  // console.log("picto_style", picto_style);
-
   // https://stackoverflow.com/questions/63782544/react-open-mailto-e-mail-client-onclick-with-body-from-textarea
   const send_email = (event) => {
     event.preventDefault();
@@ -177,7 +174,6 @@ export function Footer({ max_width }) {
         picto_style={picto_style}
       /> */}
       <FooterJu
-        // font_style={font_style}
         picto_facebook={picto_facebook}
         picto_style={picto_style}
         max_width={max_width}

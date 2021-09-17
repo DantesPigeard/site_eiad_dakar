@@ -1,17 +1,23 @@
 import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 
-function get_style(background_color, text_color, text_size) {
+function get_style(background_color, text_color, text_size, padding) {
   return {
     backgroundColor: background_color,
     color: text_color,
     fontSize: text_size,
-    padding: "1em",
+    padding: padding,
     fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
   };
 }
-export function LatinText({ background_color, text_color, text_size }) {
-  const style = get_style(background_color, text_color, text_size);
+export function LatinText({
+  background_color,
+  text_color,
+  text_size,
+  padding,
+  className,
+}) {
+  const style = get_style(background_color, text_color, text_size, padding);
 
   const data_text = useStaticQuery(
     graphql`
@@ -24,7 +30,11 @@ export function LatinText({ background_color, text_color, text_size }) {
       }
     `
   );
-  return <div style={style}>{data_text.file.childPlainText.content}</div>;
+  return (
+    <div className={className} style={style}>
+      {data_text.file.childPlainText.content}
+    </div>
+  );
 }
 
 export function LegalContent({ background_color, text_color, text_size }) {

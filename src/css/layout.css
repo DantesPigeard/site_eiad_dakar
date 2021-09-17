@@ -1,48 +1,23 @@
 body {
   /* margin: 0; */
   background: white;
-  /* 
-  not possible to passe font loaded from somewhere here, maybe is due to step of page elements loading
-  font-family: Raleway, -apple-system, Roboto, sans-serif, serif;
-  font-weight: normal; */
+}
+
+.children {
+  font-family: "Raleway", -apple-system, Roboto, sans-serif, serif;
+  color: white;
 }
 
 .md_style {
-  font-size: 0.8em;
+  font-size: 0.9em;
   color: #066ea5;
   background: white;
   margin: 0 auto;
   padding: 1em;
-  max-width: 650px;
+  max-width: 700px;
   text-align: justify;
 }
 
 .md_container {
   background: white;
-  /* border-bottom: 1px solid #066ea5; */
-}
-
-/* .md_style {
-  font-size: 0.8em;
-  background: #066ea5;
-  margin: 0 auto;
-  padding: 1em;
-  max-width: 650px;
-  text-align: justify;
-}
-
-.md_container {
-  background: #066ea5;
-  border-bottom: 1px solid white;
-} */
-
-.bg_img_txt {
-  font-size: 1.5em;
-  text-align: center;
-}
-
-@media (max-width: 600px) {
-  .bg_img_txt {
-    font-size: 1.1em;
-  }
 }

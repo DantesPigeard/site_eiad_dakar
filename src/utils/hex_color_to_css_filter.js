@@ -8,8 +8,6 @@
  * need start from a black color
  */
 
-("use strict");
-
 /**
  * EXPORT FUNCTION
  * */

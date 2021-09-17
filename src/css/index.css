@@ -1,0 +1,10 @@
+.outside {
+  text-align: center;
+  position: absolute;
+  top: 1em;
+}
+
+.inside {
+  margin-left: 1em;
+  margin-right: 1em;
+}
