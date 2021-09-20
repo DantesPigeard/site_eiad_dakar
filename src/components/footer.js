@@ -11,34 +11,6 @@ import { style } from "../utils/hex_color_to_css_filter";
 import "../css/footer.css";
 import picto_facebook from "../../media/picto/facebook_2021.svg";
 
-// le bleu #066ea5
-// le jaune #feec04
-
-// function FooterStan({ font_style, picto_facebook, picto_style }) {
-//   return (
-//     <div>
-//       <div className="f_bar_stan" style={font_style}>
-//         <a className="text" href="mailto:dakar.eiad@gmail.com">
-//           CONTACTEZ-NOUS direct email
-//         </a>
-//         <LinkPage class_name="text" where="/contact">
-//           CONTACTEZ-NOUS via formulaire
-//         </LinkPage>
-//         <ButtonPicto
-//           src={picto_facebook}
-//           stylePicto={picto_style}
-//           classNameContainer="picto_container"
-//           alt="facebook"
-//           href="https://www.facebook.com/eiad.dakar"
-//         />
-//         <LinkPage class_name="text" where="/legal">
-//           MENTIONS LÉGALES
-//         </LinkPage>
-//       </div>
-//     </div>
-//   );
-// }
-
 function FooterJu({ picto_facebook, picto_style, max_width }) {
   let w = useCanvas().width;
   if (w >= max_width) {
@@ -64,7 +36,14 @@ function FooterJu({ picto_facebook, picto_style, max_width }) {
     flexDirection: "column",
     textAlign: "center",
     alignItems: "center",
-    paddingLeft: w / 3 + "px",
+    paddingLeft: w / 2.7 + "px",
+  };
+
+  const f_group_ju_2 = {
+    paddingRight: "0.5em",
+    paddingTop: "60px",
+    fontWeight: "400",
+    fontSize: "0.8em",
   };
 
   return (
@@ -84,7 +63,7 @@ function FooterJu({ picto_facebook, picto_style, max_width }) {
           href="https://www.facebook.com/eiad.dakar"
         />
       </div>
-      <div className="f_group_ju_2">
+      <div style={f_group_ju_2}>
         <LinkPage class_name="text" where="/legal">
           <strong>MENTIONS LÉGALES</strong>
         </LinkPage>

@@ -39,8 +39,9 @@ export function Header({ max_width }) {
   const font_style = {
     // fontFamily: "Roboto, serif",
     // fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
-    fontWeight: "normal",
+    fontWeight: 400,
     color: "#066ea5",
+    // color: "magenta",
   };
 
   let w = useCanvas().width;

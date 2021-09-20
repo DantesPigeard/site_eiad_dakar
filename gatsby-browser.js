@@ -4,4 +4,4 @@
 // https://www.gatsbyjs.com/docs/how-to/styling/using-web-fonts/
 
 import "@fontsource/raleway";
-import "@fontsource/raleway/700.css";
+// import "@fontsource/raleway/600.css";

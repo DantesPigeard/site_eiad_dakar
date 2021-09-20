@@ -1,9 +1,4 @@
-.f_bar_stan {
-  background: rgba(0, 0, 0, 0);
-  display: flex;
-}
-
-.f_group_ju_1 {
+/* .f_group_ju_1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -11,12 +6,12 @@
   text-align: center;
   align-items: center;
   padding-left: 40%;
-}
+} */
 
-.f_group_ju_2 {
+/* .f_group_ju_2 {
   padding-right: 0.5em;
   padding-top: 60px;
-}
+} */
 
 .text {
   padding: 0 1em;
@@ -36,15 +31,3 @@
   width: 30px;
   height: 40px;
 }
-
-/* a:link {
-  color: #066ea5;
-}
-
-a:visited {
-  color: #066ea5;
-}
-
-a:hover {
-  color: #a3d0eb;
-} */

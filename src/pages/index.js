@@ -20,7 +20,7 @@ import "../css/index.css";
 
 // CHARTE COULEUR
 // bleu juliette #066ea5
-// bleu clair #a3d0eb
+// bleu clair #8ec0e9;
 // le jaune #feec04
 
 // markup

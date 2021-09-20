@@ -8,12 +8,15 @@
   width: 160px;
   padding-top: 0.4em;
   padding-left: 1em;
+  /* color: magenta; */
 }
 
 .h_bar_text {
   display: flex;
   font-family: "Raleway", -apple-system, Roboto, sans-serif, serif;
-  font-size: 1em;
+  font-size: 0.95em;
+  /* color: magenta; */
+  /* color: #066ea5; */
 }
 
 .h_text {
@@ -23,7 +26,8 @@
 .h_cell {
   text-align: center;
   background: white;
-  color: #066ea5;
+
+  /* color: magenta; */
 
   padding-right: 1em;
   background: rgba(0, 0, 0, 0);

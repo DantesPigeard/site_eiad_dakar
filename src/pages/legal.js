@@ -1,13 +1,54 @@
 import * as React from "react";
-
+// gatsby
+import { useStaticQuery, graphql } from "gatsby";
+// APP
 import { Layout } from "../components/layout";
-import { LegalContent } from "../components/content_misc";
+import { SelectMD } from "../components/markdown";
+
+function LegalContent() {
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/legal/" } }) {
+          edges {
+            node {
+              id
+              html
+              frontmatter {
+                title
+                author
+                date
+              }
+            }
+          }
+        }
+      }
+    `
+  );
+
+  // const style = {
+  //   backgroundColor: background_color,
+  //   color: text_color,
+  //   fontSize: text_size,
+  //   padding: padding,
+  // };
+
+  return (
+    <div>
+      <div className="md_container">
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <SelectMD className="md_style" node={node} />
+        ))}
+      </div>
+    </div>
+  );
+}
 
 // markup
 const Legal = () => {
   return (
     <Layout>
-      <LegalContent text_color="#066ea5" text_size="0.7em" />
+      <LegalContent />
     </Layout>
   );
 };

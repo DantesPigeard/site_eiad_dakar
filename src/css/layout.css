@@ -15,9 +15,23 @@ body {
   margin: 0 auto;
   padding: 1em;
   max-width: 700px;
+
   text-align: justify;
 }
 
 .md_container {
   background: white;
+}
+
+a {
+  color: #066ea5;
+}
+
+a:link {
+  text-decoration: none;
+  color: #066ea5;
+}
+
+a:hover {
+  color: #8ec0e9;
 }
