@@ -1,63 +1,14 @@
 /**
- * convert data color to css filter
- * 2021-2021 v 0.1.0
- * * inspired from :
- * https://codepen.io/sosuke/pen/Pjoqqp
- * https://stackoverflow.com/a/43960991/604861
  *
- * need start from a black color
+ * Color utilities
+ * 2021-2021
+ *
  */
-
-/**
- * EXPORT FUNCTION
- * */
-export function css(hex_value) {
-  const rgb = hex_to_rgb(hex_value);
-  if (rgb.length !== 3) {
-    alert("Invalid format, need to pass hexadecimal value");
-    return;
-  }
-  const color = new Color(rgb[0], rgb[1], rgb[2]);
-  const solver = new Solver(color);
-  const result = solver.solve();
-
-  return result.filter_css;
-}
-
-export function style(hex_value) {
-  const f = data(hex_value);
-  return (
-    f.invert +
-    " " +
-    f.sepia +
-    " " +
-    f.saturate +
-    " " +
-    f.hue +
-    " " +
-    f.brightness +
-    " " +
-    f.contrast
-  );
-}
-
-export function data(hex_value) {
-  const rgb = hex_to_rgb(hex_value);
-  if (rgb.length !== 3) {
-    alert("Invalid format, need to pass hexadecimal value");
-    return;
-  }
-  const color = new Color(rgb[0], rgb[1], rgb[2]);
-  const solver = new Solver(color);
-  const result = solver.solve();
-
-  return result.filter_data;
-}
 
 /**
  * INTERNAL FUNCTION
  * */
-function hex_to_rgb(hex) {
+export function hex_to_rgb(hex) {
   // Expand shorthand form (e.g. "03F") to full form (e.g. "0033FF")
   const shorthandRegex = /^#?([a-f\d])([a-f\d])([a-f\d])$/i;
   hex = hex.replace(shorthandRegex, (m, r, g, b) => {
@@ -72,6 +23,90 @@ function hex_to_rgb(hex) {
         parseInt(result[3], 16),
       ]
     : null;
+}
+
+/**
+ * convert data color to css filter
+ * 2021-2021 v 0.2.0
+ * * inspired from :
+ * https://codepen.io/sosuke/pen/Pjoqqp
+ * https://stackoverflow.com/a/43960991/604861
+ *
+ * need start from a black color
+ */
+export function css_hex_to_filter(hex_value) {
+  const rgb = hex_to_rgb(hex_value);
+  if (rgb.length !== 3) {
+    alert("Invalid format, need to pass hexadecimal value");
+    return;
+  }
+  const result = filter_solver(rgb[0], rgb[1], rgb[2]);
+  if (result) {
+    return result.filter_css;
+  }
+  return null;
+}
+
+export function css_rgb_to_filter(red, green, blue) {
+  const result = filter_solver(red, green, blue);
+  if (result) {
+    return result.filter_css;
+  }
+  return null;
+}
+
+export function style_rgb_to_filter(red, green, blue) {
+  const filter = data_rgb_to_filter(red, green, blue);
+  return filter_to_string(filter);
+}
+
+export function style_hex_to_filter(hex_value) {
+  const filter = data_hex_to_filter(hex_value);
+  return filter_to_string(filter);
+}
+
+export function data_rgb_to_filter(red, green, blue) {
+  const result = filter_solver(red, green, blue);
+  if (result) {
+    return result.filter_data;
+  }
+  return null;
+}
+
+export function data_hex_to_filter(hex_value) {
+  const rgb = hex_to_rgb(hex_value);
+  if (rgb.length !== 3) {
+    alert("Invalid format, need to pass hexadecimal value");
+    return;
+  }
+  return data_rgb_to_filter(rgb[0], rgb[1], rgb[2]);
+}
+
+// INTERNAL
+function filter_to_string(filter) {
+  return (
+    filter.invert +
+    " " +
+    filter.sepia +
+    " " +
+    filter.saturate +
+    " " +
+    filter.hue +
+    " " +
+    filter.brightness +
+    " " +
+    filter.contrast
+  );
+}
+
+function filter_solver(red, green, blue) {
+  if (!isNaN(red) && !isNaN(green) && !isNaN(blue)) {
+    const color = new Color(red, green, blue);
+    const solver = new Solver(color);
+    const result = solver.solve();
+    return result;
+  }
+  return null;
 }
 
 /**

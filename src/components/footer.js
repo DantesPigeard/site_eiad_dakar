@@ -6,7 +6,8 @@ import { graphql, useStaticQuery } from "gatsby";
 // UTILS
 import { useCanvas } from "../hook/hook";
 import BackgroundMedia from "../components/background_media";
-import { style } from "../utils/hex_color_to_css_filter";
+// import { style } from "../utils/hex_color_to_css_filter";
+import { style_hex_to_filter } from "../utils/color";
 // EIAD
 import "../css/footer.css";
 import picto_facebook from "../../media/picto/facebook_2021.svg";
@@ -125,7 +126,7 @@ export function Footer({ max_width }) {
     `
   );
 
-  const style_filter_data = style("#066ea5");
+  const style_filter_data = style_hex_to_filter("#066ea5");
 
   const picto_style = {
     width: "25px",

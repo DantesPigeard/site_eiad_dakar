@@ -26,13 +26,6 @@ function LegalContent() {
     `
   );
 
-  // const style = {
-  //   backgroundColor: background_color,
-  //   color: text_color,
-  //   fontSize: text_size,
-  //   padding: padding,
-  // };
-
   return (
     <div>
       <div className="md_container">
