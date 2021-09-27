@@ -10,7 +10,7 @@ function get_style(background_color, text_color, text_size, padding) {
     // fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
   };
 }
-export function LatinText({
+export function TextLatin({
   background_color,
   text_color,
   text_size,
