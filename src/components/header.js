@@ -35,7 +35,7 @@ function Button({ where, children }) {
   );
 }
 
-export function Header({ max_width }) {
+export function Header({ max_width, margin }) {
   const font_style = {
     // fontFamily: "Roboto, serif",
     // fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
@@ -51,13 +51,14 @@ export function Header({ max_width }) {
 
   const style_h_bar = {
     width: w + "px",
+    margin: margin,
     // maxWidth: max_width + "px",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
   };
 
-  console.log("style_h_bar", style_h_bar);
+  // console.log("style_h_bar", style_h_bar);
 
   const bg_header = useStaticQuery(
     graphql`

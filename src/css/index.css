@@ -5,6 +5,8 @@
 }
 
 .inside {
-  margin-left: 1em;
-  margin-right: 1em;
+  font-size: 0.9em;
+  margin: 0 auto;
+  padding: 1em;
+  max-width: 700px;
 }

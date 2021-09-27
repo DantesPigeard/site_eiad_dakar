@@ -6,13 +6,12 @@ import { graphql, useStaticQuery } from "gatsby";
 // UTILS
 import { useCanvas } from "../hook/hook";
 import BackgroundMedia from "../components/background_media";
-// import { style } from "../utils/hex_color_to_css_filter";
 import { style_hex_to_filter } from "../utils/color";
 // EIAD
 import "../css/footer.css";
 import picto_facebook from "../../media/picto/facebook_2021.svg";
 
-function FooterJu({ picto_facebook, picto_style, max_width }) {
+function FooterJu({ picto_facebook, picto_style, max_width, margin }) {
   let w = useCanvas().width;
   if (w >= max_width) {
     w = max_width;
@@ -20,7 +19,7 @@ function FooterJu({ picto_facebook, picto_style, max_width }) {
 
   const f_bar_ju = {
     width: w + "px",
-    // maxWidth: max_width + "px",
+    margin: margin,
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
@@ -111,7 +110,7 @@ function LinkPage({ class_name, where, children }) {
   );
 }
 
-export function Footer({ max_width }) {
+export function Footer({ max_width, margin }) {
   const bg_footer = useStaticQuery(
     graphql`
       query {
@@ -148,15 +147,11 @@ export function Footer({ max_width }) {
 
   return (
     <BackgroundMedia height="140px" data_query={bg_footer}>
-      {/* <FooterStan
-        font_style={font_style}
-        picto_facebook={picto_facebook}
-        picto_style={picto_style}
-      /> */}
       <FooterJu
         picto_facebook={picto_facebook}
         picto_style={picto_style}
         max_width={max_width}
+        margin={margin}
       />
     </BackgroundMedia>
   );
