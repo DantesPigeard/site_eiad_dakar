@@ -13,7 +13,7 @@ const partenaires_style = {
 };
 
 const elem_style = {
-  padding: "0.2em",
+  padding: "0.1em",
 };
 
 export function Partenaires() {
@@ -26,7 +26,7 @@ export function Partenaires() {
               extension
               relativePath
               childImageSharp {
-                fixed(height: 50) {
+                fixed(height: 45) {
                   ...GatsbyImageSharpFixed
                 }
               }

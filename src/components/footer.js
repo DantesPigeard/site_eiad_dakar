@@ -4,7 +4,7 @@ import * as React from "react";
 import { navigate } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
 // UTILS
-import { useCanvas } from "../hook/hook";
+import { useCanvas } from "../hook/canvas";
 import BackgroundMedia from "../components/background_media";
 import { style_hex_to_filter } from "../utils/color";
 // EIAD

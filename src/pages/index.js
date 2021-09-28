@@ -2,6 +2,8 @@
 import * as React from "react";
 // GATSBY
 import { graphql, useStaticQuery } from "gatsby";
+// APP
+import { useWidth } from "../hook/canvas";
 // EIAD
 import { Layout } from "../components/layout";
 import BackgroundMedia from "../components/background_media";
@@ -10,8 +12,6 @@ import { TextIntro } from "../components/text_intro";
 import "../css/global.css";
 import { QueryHome } from "../img_query/bg_hd_home";
 import { QueryTrameBleue } from "../img_query/bg_hd_trame_bleue";
-// EIAD
-// EIAD
 import "../css/index.css";
 
 // FONT
@@ -35,6 +35,12 @@ const IndexPage = () => {
     textAlign: "center",
   };
 
+  let height_intro = "320px";
+  console.log("useWidth()", useWidth());
+  if (useWidth() < 625) {
+    height_intro = "425px";
+  }
+
   return (
     <Layout>
       <BackgroundMedia
@@ -45,11 +51,11 @@ const IndexPage = () => {
         <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 18 OCTOBRE</div>
       </BackgroundMedia>
       <BackgroundMedia
-        height="0.75n"
+        height={height_intro}
         data_query={bg_trame_bleue}
-        className="outside"
+        className="bg_img"
       >
-        <TextIntro className="inside" />
+        <TextIntro className="text_intro_inside" />
       </BackgroundMedia>
     </Layout>
   );

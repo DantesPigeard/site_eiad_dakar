@@ -6,7 +6,7 @@ import PropTypes from "prop-types";
 import { navigate } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
 // UTILS
-import { useCanvas } from "../hook/hook";
+import { useCanvas } from "../hook/canvas";
 import BackgroundMedia from "../components/background_media";
 // import { str_unit_to_number } from "../utils/misc";
 // EIAD

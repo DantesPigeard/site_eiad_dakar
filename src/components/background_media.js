@@ -4,7 +4,7 @@ import styled from "styled-components";
 // GATSBY
 import BackgroundImage from "gatsby-background-image";
 // UTILS
-import { useCanvas } from "../hook/hook";
+import { useCanvas } from "../hook/canvas";
 import { str_unit_to_number } from "../utils/misc";
 
 /**

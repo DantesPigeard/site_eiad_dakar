@@ -1,12 +1,12 @@
-.outside {
+.bg_img {
   text-align: center;
   position: absolute;
-  top: 1em;
+  /* top: 1em; */
 }
 
-.inside {
+.text_intro_inside {
   font-size: 0.9em;
   margin: 0 auto;
-  padding: 1em;
+  /* padding: 0.5em; */
   max-width: 700px;
 }
