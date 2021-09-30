@@ -1,34 +1,36 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@700&display=swap"); */
+
 .button_style {
   cursor: pointer;
-  min-width: 100px;
-}
-.h_bar {
-  display: flex;
-  align-items: center;
 }
 
 .h_bar_logo {
-  width: 150px;
+  width: 160px;
   padding-top: 0.4em;
-  padding-left: 0.4em;
+  padding-left: 1em;
+  /* color: magenta; */
 }
 
 .h_bar_text {
-  width: 500px;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  padding-left: 0.2em;
+  display: flex;
+  font-family: "Raleway", -apple-system, Roboto, sans-serif, serif;
+  font-size: 0.95em;
+  /* color: magenta; */
+  /* color: #066ea5; */
 }
 
 .h_text {
-  padding-top: 0.8em;
+  padding-top: 1.4em;
 }
 
 .h_cell {
   text-align: center;
   background: white;
-  color: #066ea5;
-  font-size: 1em;
+
+  /* color: magenta; */
+
+  padding-right: 1em;
+  background: rgba(0, 0, 0, 0);
 }
 
 .logo_style {
@@ -37,6 +39,11 @@
 
 @media (max-width: 600px) {
   .h_text {
-    font-size: 0.8em;
+    padding-top: 0.8em;
+    font-size: 0.7em;
+  }
+
+  .h_cell {
+    padding-right: 0.5em;
   }
 }

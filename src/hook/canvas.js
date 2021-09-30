@@ -1,3 +1,10 @@
+/**
+ * Hook canvas, window...
+ * 2021-2021
+ * v 0.1.0
+ */
+
+// REACT
 import { useState, useEffect } from "react";
 
 export function useCanvas() {
@@ -15,4 +22,12 @@ export function useCanvas() {
     return () => window.removeEventListener("resize", resize_canvas);
   }, []);
   return canvas;
+}
+
+export function useHeight() {
+  return useCanvas().height;
+}
+
+export function useWidth() {
+  return useCanvas().width;
 }

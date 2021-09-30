@@ -6,23 +6,25 @@ import { SelectMD } from "../components/markdown";
 import { useStaticQuery, graphql } from "gatsby";
 
 export default function About() {
-  const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
-        edges {
-          node {
-            id
-            html
-            frontmatter {
-              title
-              author
-              date
+  const data = useStaticQuery(
+    graphql`
+      query {
+        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
+          edges {
+            node {
+              id
+              html
+              frontmatter {
+                title
+                author
+                date
+              }
             }
           }
         }
       }
-    }
-  `);
+    `
+  );
   if (data !== undefined) {
     return (
       <>
@@ -43,12 +45,3 @@ export default function About() {
     );
   }
 }
-// const About = () => {
-//   return (
-//     <Layout>
-//       <LatinText text_color="#066ea5" />
-//     </Layout>
-//   );
-// };
-
-// export default About;

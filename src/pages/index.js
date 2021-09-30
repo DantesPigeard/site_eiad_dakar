@@ -1,11 +1,18 @@
+// REACT
 import * as React from "react";
-
+// GATSBY
+import { graphql, useStaticQuery } from "gatsby";
+// APP
+import { useWidth } from "../hook/canvas";
+// EIAD
 import { Layout } from "../components/layout";
 import BackgroundMedia from "../components/background_media";
-import { LatinText } from "../components/content_misc";
+import { TextLatin } from "../components/text_latin";
+import { TextIntro } from "../components/text_intro";
 import "../css/global.css";
-
-import { graphql, useStaticQuery } from "gatsby";
+import { QueryHome } from "../img_query/bg_hd_home";
+import { QueryTrameBleue } from "../img_query/bg_hd_trame_bleue";
+import "../css/index.css";
 
 // FONT
 // https://fonts.google.com/specimen/Raleway?category=Sans+Serif&preview.text=SOON&preview.text_type=custom
@@ -14,35 +21,42 @@ import { graphql, useStaticQuery } from "gatsby";
 
 // CHARTE COULEUR
 // bleu juliette #066ea5
-// bleu clair #a3d0eb
+// bleu clair #8ec0e9;
 // le jaune #feec04
 
 // markup
 const IndexPage = () => {
-  const data_home = useStaticQuery(
-    graphql`
-      query {
-        bg_hd: file(relativePath: { eq: "fond_rose_tete.jpg" }) {
-          childImageSharp {
-            fluid(quality: 90, maxWidth: 1920) {
-              ...GatsbyImageSharpFluid_withWebp
-            }
-          }
-        }
-      }
-    `
-  );
+  const bg_home = QueryHome();
+  const bg_trame_bleue = QueryTrameBleue();
+
+  const style_slogan = {
+    fontSize: "1.1em",
+    margin: "0 auto",
+    textAlign: "center",
+  };
+
+  let height_intro = "320px";
+  console.log("useWidth()", useWidth());
+  if (useWidth() < 650) {
+    height_intro = "450px";
+  }
 
   return (
     <Layout>
       <BackgroundMedia
-        normal_height="0.5"
-        data_query={data_home}
-        style_txt="bg_img_txt"
+        height="0.5n"
+        data_query={bg_home}
+        className="bg_img_txt"
       >
-        APPEL À CANDIDATURES JUSQU'AU 22 AOÛT
+        <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 18 OCTOBRE</div>
       </BackgroundMedia>
-      {/* <LatinText text_color="#066ea5" /> */}
+      <BackgroundMedia
+        height={height_intro}
+        data_query={bg_trame_bleue}
+        className="bg_img"
+      >
+        <TextIntro className="text_intro_inside" />
+      </BackgroundMedia>
     </Layout>
   );
 };

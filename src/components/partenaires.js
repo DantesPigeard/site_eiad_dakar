@@ -6,19 +6,17 @@ import partenaires from "../../media/partenaires.jpg";
 
 const partenaires_style = {
   position: "relative",
-  align: "auto",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
+  justifyContent: "center",
+};
+
+const elem_style = {
+  padding: "0.1em",
 };
 
 export function Partenaires() {
-  /*
-                  fixed(width: 100, height: 100) {
-                  ...GatsbyImageSharpFixed
-                }
-                */
-  /*fluid(maxWidth: 400, maxHeight: 400) {
-                  ...GatsbyImageSharpFluid
-                }
-                */
   const { allFile } = useStaticQuery(
     graphql`
       query {
@@ -28,7 +26,7 @@ export function Partenaires() {
               extension
               relativePath
               childImageSharp {
-                fixed(width: 150) {
+                fixed(height: 45) {
                   ...GatsbyImageSharpFixed
                 }
               }
@@ -41,17 +39,13 @@ export function Partenaires() {
 
   return (
     <div>
-      <div style={{ position: "relative" }}>
+      <div style={partenaires_style}>
         {allFile.edges.map(({ node }) => (
-          // <div>
-          <Img fixed={node.childImageSharp.fixed} />
-          /* <Img fluid={node.childImageSharp.fluid} /> */
-          // </div>
+          <div style={elem_style}>
+            <Img fixed={node.childImageSharp.fixed} />
+          </div>
         ))}
       </div>
     </div>
-    // <div className="partenaire">
-    //   <img src={partenaires} alt="partenaires" />
-    // </div>
   );
 }

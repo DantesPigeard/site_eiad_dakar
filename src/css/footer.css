@@ -1,33 +1,33 @@
-.f_bar {
-  background: #066ea5;
+/* .f_group_ju_1 {
   display: flex;
-}
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  padding-left: 40%;
+} */
+
+/* .f_group_ju_2 {
+  padding-right: 0.5em;
+  padding-top: 60px;
+} */
 
 .text {
   padding: 0 1em;
   align-self: center;
   justify-self: center;
   cursor: pointer;
+  color: #066ea5;
+  text-decoration: none;
 }
 
 .picto {
   width: 25px;
-  transform: translate(12%, 25%);
   filter: invert(100%);
 }
+
 .picto_container {
   width: 30px;
   height: 40px;
-}
-
-a:link {
-  color: white;
-}
-
-a:visited {
-  color: white;
-}
-
-a:hover {
-  color: #a3d0eb;
 }
