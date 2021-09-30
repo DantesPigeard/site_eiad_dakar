@@ -53,30 +53,3 @@ export function TextIntro({
     );
   } else return null;
 }
-
-// export function TextIntro({
-//   background_color,
-//   text_color,
-//   text_size,
-//   padding,
-//   className,
-// }) {
-//   const style = get_style(background_color, text_color, text_size, padding);
-
-//   const data_text = useStaticQuery(
-//     graphql`
-//       query {
-//         file(relativePath: { eq: "intro.txt" }) {
-//           childPlainText {
-//             content
-//           }
-//         }
-//       }
-//     `
-//   );
-//   return (
-//     <div className={className} style={style}>
-//       {data_text.file.childPlainText.content}
-//     </div>
-//   );
-// }

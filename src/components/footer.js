@@ -41,7 +41,7 @@ function FooterJu({ picto_facebook, picto_style, max_width, margin }) {
 
   const f_group_ju_2 = {
     paddingRight: "0.5em",
-    paddingTop: "60px",
+    paddingTop: "40px",
     fontWeight: "400",
     fontSize: "0.8em",
   };
@@ -50,11 +50,11 @@ function FooterJu({ picto_facebook, picto_style, max_width, margin }) {
     <div style={f_bar_ju}>
       <div style={f_group_ju_1}>
         <a className="text" href="mailto:dakar.eiad@gmail.com">
-          <strong>CONTACTEZ-NOUS direct email</strong>
+          <strong>CONTACTEZ-NOUS</strong>
         </a>
-        <LinkPage class_name="text" where="/contact">
+        {/* <LinkPage class_name="text" where="/contact">
           <strong>CONTACTEZ-NOUS via formulaire</strong>
-        </LinkPage>
+        </LinkPage> */}
         <ButtonPicto
           src={picto_facebook}
           stylePicto={picto_style}
