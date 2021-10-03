@@ -146,7 +146,11 @@ export function Footer({ max_width, margin }) {
   };
 
   return (
-    <BackgroundMedia height="140px" data_query={bg_footer}>
+    <BackgroundMedia
+      height="140px"
+      data_query={bg_footer}
+      default_color="#feec04"
+    >
       <FooterJu
         picto_facebook={picto_facebook}
         picto_style={picto_style}

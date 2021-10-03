@@ -8,7 +8,6 @@ import { graphql, useStaticQuery } from "gatsby";
 // UTILS
 import { useCanvas } from "../hook/canvas";
 import BackgroundMedia from "../components/background_media";
-// import { str_unit_to_number } from "../utils/misc";
 // EIAD
 import logo from "../../media/EIAD_logo_bleu.svg";
 import "../css/header.css";

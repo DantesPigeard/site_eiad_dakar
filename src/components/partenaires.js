@@ -3,13 +3,18 @@ import { useStaticQuery, graphql } from "gatsby";
 import Img from "gatsby-image";
 
 import partenaires from "../../media/partenaires.jpg";
-
+const partnaire_container = {
+  position: "relative",
+  maxWidth: "850px",
+  margin: "0 auto",
+  alignItems: "center",
+};
 const partenaires_style = {
   position: "relative",
   display: "flex",
   flexDirection: "row",
   alignItems: "center",
-  justifyContent: "center",
+  justifyContent: "space-between",
 };
 
 const elem_style = {
@@ -38,7 +43,7 @@ export function Partenaires() {
   );
 
   return (
-    <div>
+    <div style={partnaire_container}>
       <div style={partenaires_style}>
         {allFile.edges.map(({ node }) => (
           <div style={elem_style}>

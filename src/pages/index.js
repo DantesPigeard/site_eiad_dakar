@@ -47,6 +47,7 @@ const IndexPage = () => {
         height="0.5n"
         data_query={bg_home}
         className="bg_img_txt"
+        default_color="pink"
       >
         <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 18 OCTOBRE</div>
       </BackgroundMedia>
@@ -54,6 +55,7 @@ const IndexPage = () => {
         height={height_intro}
         data_query={bg_trame_bleue}
         className="bg_img"
+        default_color="#066ea5"
       >
         <TextIntro className="text_intro_inside" />
       </BackgroundMedia>

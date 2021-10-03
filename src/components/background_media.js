@@ -1,3 +1,8 @@
+/**
+ * Background media
+ * v 0.2.0
+ * 2021-2021
+ */
 // REACT
 import React from "react";
 import styled from "styled-components";
@@ -6,12 +11,6 @@ import BackgroundImage from "gatsby-background-image";
 // UTILS
 import { useCanvas } from "../hook/canvas";
 import { str_unit_to_number } from "../utils/misc";
-
-/**
- * Background media
- * v 0.1.0
- * 2021-2021
- */
 
 function height_calc(value, str) {
   if (str !== undefined) {
@@ -33,6 +32,7 @@ const BackgroundSection = ({
   children,
   height,
   data_query,
+  default_color,
   style,
   className,
 }) => {
@@ -46,7 +46,7 @@ const BackgroundSection = ({
     <BackgroundImage
       Tag="section"
       fluid={bg_img_hd}
-      backgroundColor={`#040e18`}
+      backgroundColor={default_color}
     >
       <div
         style={{
