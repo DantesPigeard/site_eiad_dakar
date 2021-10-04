@@ -1,13 +1,12 @@
 // REACT
 import * as React from "react";
 // GATSBY
-import { graphql, useStaticQuery } from "gatsby";
+
 // APP
 import { useWidth } from "../hook/canvas";
 // EIAD
 import { Layout } from "../components/layout";
 import BackgroundMedia from "../components/background_media";
-import { TextLatin } from "../components/text_latin";
 import { TextIntro } from "../components/text_intro";
 import "../css/global.css";
 import { QueryHome } from "../img_query/bg_hd_home";

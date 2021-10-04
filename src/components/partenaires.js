@@ -4,20 +4,6 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
 import "../css/partenaires.css";
 
-// const partnaire_container = {
-//   position: "relative",
-//   maxWidth: "850px",
-//   margin: "0 auto",
-//   alignItems: "center",
-// };
-// const partenaires_style = {
-//   position: "relative",
-//   display: "flex",
-//   flexDirection: "row",
-//   alignItems: "center",
-//   justifyContent: "space-between",
-// };
-
 const elem_style = {
   paddingBottom: "0.6em",
 };
@@ -56,20 +42,4 @@ export function Partenaires() {
       </div>
     </div>
   );
-
-  // return (
-  //   <div style={partnaire_container}>
-  //     <div style={partenaires_style}>
-  //       {allFile.edges.map(({ node }) => {
-  //         const img = getImage(node.childImageSharp.gatsbyImageData);
-  //         return (
-  //           <div style={elem_style}>
-  //             <GatsbyImage image={img} alt="partenaires" />
-  //             {/* <Img fixed={node.childImageSharp.fixed} /> */}
-  //           </div>
-  //         );
-  //       })}
-  //     </div>
-  //   </div>
-  // );
 }

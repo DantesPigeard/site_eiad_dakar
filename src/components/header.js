@@ -1,7 +1,5 @@
 //REACT
 import * as React from "react";
-// MISC
-import PropTypes from "prop-types";
 // GATSBY
 import { navigate } from "gatsby";
 import { graphql, useStaticQuery } from "gatsby";
@@ -36,11 +34,8 @@ function Button({ where, children }) {
 
 export function Header({ max_width, margin }) {
   const font_style = {
-    // fontFamily: "Roboto, serif",
-    // fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
     fontWeight: 400,
     color: "#066ea5",
-    // color: "magenta",
   };
 
   let w = useCanvas().width;
@@ -56,8 +51,6 @@ export function Header({ max_width, margin }) {
     alignItems: "center",
     justifyContent: "space-between",
   };
-
-  // console.log("style_h_bar", style_h_bar);
 
   const bg_header = useStaticQuery(
     graphql`

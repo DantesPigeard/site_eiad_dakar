@@ -23,7 +23,7 @@
 .h_cell {
   text-align: center;
   background: white;
-  padding-right: 1em;
+  padding-right: 1.5em;
   background: rgba(0, 0, 0, 0);
 }
 
@@ -43,7 +43,7 @@
   }
 
   .h_cell {
-    padding-right: 0.5em;
+    padding-right: 1em;
   }
 }
 
@@ -58,6 +58,6 @@
   }
 
   .h_cell {
-    padding-right: 0.3em;
+    padding-right: 0.6em;
   }
 }

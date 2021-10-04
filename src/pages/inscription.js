@@ -2,7 +2,6 @@ import React from "react";
 
 // gatsby
 import { useStaticQuery, graphql } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
 // app
 import { Layout } from "../components/layout";
 import { Partenaires } from "../components/partenaires";
@@ -29,14 +28,6 @@ export default function Inscription() {
     }
   `);
 
-  const partnaire_img = {
-    position: "relative",
-    maxWidth: "850px",
-    margin: "0 auto",
-    alignItems: "center",
-    border: "solid 1px black",
-  };
-
   if (data !== undefined) {
     return (
       <>
@@ -46,10 +37,6 @@ export default function Inscription() {
               <SelectMD className="md_style" node={node} />
             ))}
           </div>
-          {/* <div style={partnaire_img}>
-            <StaticImage src="../../media/partenaires.jpg" alt="partenaires" />
-          </div> */}
-
           <Partenaires />
         </Layout>
       </>
