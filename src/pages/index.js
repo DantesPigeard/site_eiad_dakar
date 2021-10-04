@@ -1,13 +1,12 @@
 // REACT
 import * as React from "react";
 // GATSBY
-import { graphql, useStaticQuery } from "gatsby";
+
 // APP
 import { useWidth } from "../hook/canvas";
 // EIAD
 import { Layout } from "../components/layout";
 import BackgroundMedia from "../components/background_media";
-import { TextLatin } from "../components/text_latin";
 import { TextIntro } from "../components/text_intro";
 import "../css/global.css";
 import { QueryHome } from "../img_query/bg_hd_home";
@@ -36,9 +35,15 @@ const IndexPage = () => {
   };
 
   let height_intro = "320px";
-  console.log("useWidth()", useWidth());
   if (useWidth() < 650) {
     height_intro = "450px";
+  }
+  if (useWidth() < 500) {
+    height_intro = "550px";
+  }
+
+  if (useWidth() < 400) {
+    height_intro = "700px";
   }
 
   return (
@@ -47,6 +52,7 @@ const IndexPage = () => {
         height="0.5n"
         data_query={bg_home}
         className="bg_img_txt"
+        default_color="pink"
       >
         <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 18 OCTOBRE</div>
       </BackgroundMedia>
@@ -54,6 +60,7 @@ const IndexPage = () => {
         height={height_intro}
         data_query={bg_trame_bleue}
         className="bg_img"
+        default_color="#066ea5"
       >
         <TextIntro className="text_intro_inside" />
       </BackgroundMedia>

@@ -10,10 +10,11 @@ body {
 
 .md_style {
   font-size: 0.9em;
+  line-height: 130%;
   color: #066ea5;
   background: white;
   margin: 0 auto;
-  padding: 1em;
+  padding: 2em;
   max-width: 850px;
 
   text-align: justify;
@@ -34,4 +35,16 @@ a:link {
 
 a:hover {
   color: #8ec0e9;
+}
+
+@media (max-width: 850px) {
+  .md_style {
+    font-size: 0.7em;
+  }
+}
+
+@media (max-width: 500px) {
+  .md_style {
+    font-size: 0.6em;
+  }
 }

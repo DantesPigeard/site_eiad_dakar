@@ -1,11 +1,11 @@
 import React from "react";
+
+// gatsby
+import { useStaticQuery, graphql } from "gatsby";
 // app
 import { Layout } from "../components/layout";
 import { Partenaires } from "../components/partenaires";
 import { SelectMD } from "../components/markdown";
-// gatsby
-import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
 
 export default function Inscription() {
   const data = useStaticQuery(graphql`
@@ -27,6 +27,7 @@ export default function Inscription() {
       }
     }
   `);
+
   if (data !== undefined) {
     return (
       <>

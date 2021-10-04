@@ -1,19 +1,11 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import Img from "gatsby-image";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
 
-import partenaires from "../../media/partenaires.jpg";
-
-const partenaires_style = {
-  position: "relative",
-  display: "flex",
-  flexDirection: "row",
-  alignItems: "center",
-  justifyContent: "center",
-};
+import "../css/partenaires.css";
 
 const elem_style = {
-  padding: "0.1em",
+  paddingBottom: "0.6em",
 };
 
 export function Partenaires() {
@@ -26,9 +18,7 @@ export function Partenaires() {
               extension
               relativePath
               childImageSharp {
-                fixed(height: 45) {
-                  ...GatsbyImageSharpFixed
-                }
+                gatsbyImageData(height: 45, layout: FIXED)
               }
             }
           }
@@ -38,13 +28,17 @@ export function Partenaires() {
   );
 
   return (
-    <div>
-      <div style={partenaires_style}>
-        {allFile.edges.map(({ node }) => (
-          <div style={elem_style}>
-            <Img fixed={node.childImageSharp.fixed} />
-          </div>
-        ))}
+    <div className="partnaire_container">
+      <div className="partenaires_style">
+        {allFile.edges.map(({ node }) => {
+          const img = getImage(node.childImageSharp.gatsbyImageData);
+          return (
+            <div style={elem_style}>
+              <GatsbyImage image={img} alt="partenaires" />
+              {/* <Img fixed={node.childImageSharp.fixed} /> */}
+            </div>
+          );
+        })}
       </div>
     </div>
   );

@@ -8,15 +8,12 @@
   width: 160px;
   padding-top: 0.4em;
   padding-left: 1em;
-  /* color: magenta; */
 }
 
 .h_bar_text {
   display: flex;
   font-family: "Raleway", -apple-system, Roboto, sans-serif, serif;
   font-size: 0.95em;
-  /* color: magenta; */
-  /* color: #066ea5; */
 }
 
 .h_text {
@@ -26,10 +23,7 @@
 .h_cell {
   text-align: center;
   background: white;
-
-  /* color: magenta; */
-
-  padding-right: 1em;
+  padding-right: 1.5em;
   background: rgba(0, 0, 0, 0);
 }
 
@@ -37,13 +31,33 @@
   width: 100%;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 650px) {
+  .h_bar_logo {
+    width: 140px;
+    padding-left: 0.8em;
+  }
+
   .h_text {
     padding-top: 0.8em;
     font-size: 0.7em;
   }
 
   .h_cell {
-    padding-right: 0.5em;
+    padding-right: 1em;
+  }
+}
+
+@media (max-width: 400px) {
+  .h_bar_logo {
+    width: 100px;
+    padding-left: 0.6em;
+  }
+
+  .h_text {
+    font-size: 0.5em;
+  }
+
+  .h_cell {
+    padding-right: 0.6em;
   }
 }

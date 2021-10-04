@@ -35,7 +35,6 @@ function FooterJu({ picto_facebook, picto_style, max_width, margin }) {
     justifyContent: "center",
     flexDirection: "column",
     textAlign: "center",
-    alignItems: "center",
     paddingLeft: w / 2.7 + "px",
   };
 
@@ -84,7 +83,7 @@ function ButtonPicto({
   return (
     <div className={classNameContainer} style={styleContainer}>
       <div className={classNamePicto} style={stylePicto}>
-        <a href={href} target="_blank">
+        <a href={href} target="_blank" rel="noreferrer">
           <img src={src} alt={alt} />
         </a>
       </div>
@@ -133,20 +132,12 @@ export function Footer({ max_width, margin }) {
     filter: style_filter_data,
   };
 
-  const font_style = {
-    fontFamily: "Raleway, -apple-system, Roboto, sans-serif, serif",
-    fontWeight: "normal",
-    color: "white",
-    fontSize: "0.7em",
-  };
-
-  // https://stackoverflow.com/questions/63782544/react-open-mailto-e-mail-client-onclick-with-body-from-textarea
-  const send_email = (event) => {
-    event.preventDefault();
-  };
-
   return (
-    <BackgroundMedia height="140px" data_query={bg_footer}>
+    <BackgroundMedia
+      height="140px"
+      data_query={bg_footer}
+      default_color="#feec04"
+    >
       <FooterJu
         picto_facebook={picto_facebook}
         picto_style={picto_style}

@@ -45,6 +45,7 @@ module.exports = {
     `gatsby-transformer-remark`,
 
     // IMAGE
+    `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-plugin-sharp`,
