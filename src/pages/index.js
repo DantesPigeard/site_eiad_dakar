@@ -43,6 +43,10 @@ const IndexPage = () => {
     height_intro = "550px";
   }
 
+  if (useWidth() < 400) {
+    height_intro = "650px";
+  }
+
   return (
     <Layout>
       <BackgroundMedia
