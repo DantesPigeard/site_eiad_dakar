@@ -46,9 +46,9 @@ export default function Inscription() {
               <SelectMD className="md_style" node={node} />
             ))}
           </div>
-          <div style={partnaire_img}>
+          {/* <div style={partnaire_img}>
             <StaticImage src="../../media/partenaires.jpg" alt="partenaires" />
-          </div>
+          </div> */}
 
           <Partenaires />
         </Layout>

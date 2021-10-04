@@ -36,9 +36,11 @@ const IndexPage = () => {
   };
 
   let height_intro = "320px";
-  console.log("useWidth()", useWidth());
   if (useWidth() < 650) {
     height_intro = "450px";
+  }
+  if (useWidth() < 500) {
+    height_intro = "550px";
   }
 
   return (

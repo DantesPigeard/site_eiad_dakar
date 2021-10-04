@@ -74,7 +74,11 @@ export function Header({ max_width, margin }) {
   );
 
   return (
-    <BackgroundMedia height="140px" data_query={bg_header}>
+    <BackgroundMedia
+      height="140px"
+      data_query={bg_header}
+      default_color="#feec04"
+    >
       <div style={style_h_bar}>
         <div className="h_bar_logo">
           <Button where="/">
