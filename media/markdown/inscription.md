@@ -46,8 +46,6 @@ motivations de votre participation aux ateliers de formation de l’EIAD en 2022
 dans votre parcours d’acteur ou d’actrice et ce que vous attendez de votre participation à ces ateliers. Envoyez
 ce texte par mail à : ateliers@eiad-dakar.com
 
-## Pour les auditions des 27 et 28 octobre 2021
-
 Pour ceux dont le parcours et les motivations auront retenu l’attention du comité de sélection, préparez pour les 27 et 28 octobre
 au choix : un monologue ou une scène dialoguée. La présentation de la scène sera suivi d’un entretien avec chaque candidat.
 Les modalités de sélections pour les sessions suivantes et les dates des auditions seront communiquées ultérieurement. Les
