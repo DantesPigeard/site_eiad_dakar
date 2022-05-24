@@ -54,7 +54,7 @@ const IndexPage = () => {
         className="bg_img_txt"
         default_color="pink"
       >
-        <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 18 OCTOBRE</div>
+        <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 13 JUIN 2022</div>
       </BackgroundMedia>
       <BackgroundMedia
         height={height_intro}
