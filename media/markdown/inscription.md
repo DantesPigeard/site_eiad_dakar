@@ -41,10 +41,7 @@ d’atelier qui auront lieu du 20 juin au 1er juillet à Dakar.
 
 ## Avant le 13 juin 2021
 
-Adressez à Adama Diop et Jean-Pierre Baro un texte présentant votre parcours, vos expériences et exposant les
-motivations de votre participation aux ateliers de formation de l’EIAD en 2022-2023. Dites-nous où vous en êtes
-dans votre parcours d’acteur ou d’actrice et ce que vous attendez de votre participation à ces ateliers. Envoyez
-ce texte par mail à : ateliers@eiad-dakar.com
+Dans un texte que vous nous adressez par mail à **ateliers@eiad-dakar.com**, décrivez-nous où vous en êtes dans votre parcours d’acteur ou d’actrice, vos expériences et ce que vous attendez de votre participation à ces ateliers.
 
 Pour ceux dont le parcours et les motivations auront retenu l’attention du comité de sélection, préparez pour les 27 et 28 octobre
 au choix : un monologue ou une scène dialoguée. La présentation de la scène sera suivi d’un entretien avec chaque candidat.
