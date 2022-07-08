@@ -8,6 +8,7 @@ import { useWidth } from "../hook/canvas";
 import { Layout } from "../components/layout";
 import BackgroundMedia from "../components/background_media";
 import { TextIntro } from "../components/text_intro";
+import { Slogan } from "../components/slogan_intro";
 import "../css/global.css";
 import { QueryHome } from "../img_query/bg_hd_home";
 import { QueryTrameBleue } from "../img_query/bg_hd_trame_bleue";
@@ -54,7 +55,9 @@ const IndexPage = () => {
         className="bg_img_txt"
         default_color="pink"
       >
-        <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 13 JUIN 2022</div>
+        <Slogan className="slogan" />
+        {/* <Slogan className={slogan_style} style={style_slogan} /> */}
+        {/* <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 13 JUIN 2022</div> */}
       </BackgroundMedia>
       <BackgroundMedia
         height={height_intro}
