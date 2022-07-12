@@ -29,12 +29,6 @@ const IndexPage = () => {
   const bg_home = QueryHome();
   const bg_trame_bleue = QueryTrameBleue();
 
-  const style_slogan = {
-    fontSize: "1.1em",
-    margin: "0 auto",
-    textAlign: "center",
-  };
-
   let height_intro = "320px";
   if (useWidth() < 650) {
     height_intro = "450px";
@@ -56,8 +50,6 @@ const IndexPage = () => {
         default_color="pink"
       >
         <Slogan className="slogan" />
-        {/* <Slogan className={slogan_style} style={style_slogan} /> */}
-        {/* <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 13 JUIN 2022</div> */}
       </BackgroundMedia>
       <BackgroundMedia
         height={height_intro}

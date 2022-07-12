@@ -1,1 +1,1 @@
-EIAD Dakar ouverture en 2024
+La prochaine session Nomad débutera le 14 octobre 2022
