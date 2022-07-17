@@ -8,6 +8,7 @@ import { useWidth } from "../hook/canvas";
 import { Layout } from "../components/layout";
 import BackgroundMedia from "../components/background_media";
 import { TextIntro } from "../components/text_intro";
+import { Slogan } from "../components/slogan_intro";
 import "../css/global.css";
 import { QueryHome } from "../img_query/bg_hd_home";
 import { QueryTrameBleue } from "../img_query/bg_hd_trame_bleue";
@@ -27,12 +28,6 @@ import "../css/index.css";
 const IndexPage = () => {
   const bg_home = QueryHome();
   const bg_trame_bleue = QueryTrameBleue();
-
-  const style_slogan = {
-    fontSize: "1.1em",
-    margin: "0 auto",
-    textAlign: "center",
-  };
 
   let height_intro = "320px";
   if (useWidth() < 650) {
@@ -54,7 +49,7 @@ const IndexPage = () => {
         className="bg_img_txt"
         default_color="pink"
       >
-        <div style={style_slogan}>APPEL À CANDIDATURES JUSQU'AU 13 JUIN 2022</div>
+        <Slogan className="slogan" />
       </BackgroundMedia>
       <BackgroundMedia
         height={height_intro}

@@ -1,3 +1,3 @@
 L’École Internationale d’Acteur.trice.s de Dakar ouvrira ses portes à l'automne 2024. Elle sera un lieu de formation, un espace de rencontre, d’échanges et d’interactions, un laboratoire d’expériences artistiques. L’EIAD sera résolument moderne, engagée et à l’écoute de ses promotions. En convoquant la singularité et la renommée de l’Afrique de l’Ouest, le projet de l’EIAD réside dans la formation et la professionnalisation, sur le continent africain, des actrices, des acteurs, des metteuses en scène et des metteurs en scène de demain qui participeront au rayonnement culturel du Sénégal.
 
-D'ici 2023, l'EIAD met en place sa version nomade, EIAD-Nomad constituée de 32 semaines d'ateliers de professionnalisation. 8 sessions de 4 semaines entre octobre 2021 et juin 2023.
+D’ici 2024, l’EIAD met en place sa version nomade, "EIAD-Nomad" constituée de 4 à 5 mois d’ateliers de professionnalisation chaque saison.

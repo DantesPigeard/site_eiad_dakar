@@ -1,0 +1,1 @@
+La prochaine session Nomad débutera le 14 octobre 2022
