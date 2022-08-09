@@ -1,39 +1,19 @@
+/**
+ * Slogan
+ * v 0.2.0
+ * 2021-2022
+ */
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
-// APP
-import { SelectMD } from "./markdown";
 
 export function Slogan({
   style,
 	className,
+  content,
 }) {
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/slogan/" } }) {
-          edges {
-            node {
-              id
-              html
-              frontmatter {
-                title
-                author
-                date
-              }
-            }
-          }
-        }
-      }
-    `
-  );
 
-  if (data !== undefined) {
     return (
-      <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-					<SelectMD className={className} node={node} />
-        ))}
+      <div className={className}>
+        {content}
       </div>
     );
-  } else return null;
 }

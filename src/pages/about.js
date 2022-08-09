@@ -1,3 +1,8 @@
+/**
+ * About
+ * v 0.2.0
+ * 2021-2022
+ */
 import * as React from "react";
 // app
 import { Layout } from "../components/layout";
@@ -5,19 +10,19 @@ import { SelectMD } from "../components/markdown";
 // gatsby
 import { useStaticQuery, graphql } from "gatsby";
 
+
 export default function About() {
   const data = useStaticQuery(
     graphql`
       query {
-        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/about/" } }) {
-          edges {
-            node {
-              id
-              html
-              frontmatter {
-                title
-                author
-                date
+        allContentfulAbout {
+          nodes {
+            contenu {
+              childMarkdownRemark {
+                html
+                frontmatter {
+                  title
+                }
               }
             }
           }
@@ -30,9 +35,7 @@ export default function About() {
       <>
         <Layout>
           <div className="md_container">
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <SelectMD className="md_style" node={node} />
-            ))}
+            <SelectMD className="md_style" node={data.allContentfulAbout.nodes[0].contenu.childMarkdownRemark} />
           </div>
         </Layout>
       </>

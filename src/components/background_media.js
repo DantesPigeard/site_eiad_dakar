@@ -8,6 +8,10 @@ import React from "react";
 import styled from "styled-components";
 // GATSBY
 import BackgroundImage from "gatsby-background-image";
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import { convertToBgImage } from "gbimage-bridge";
+
+
 // UTILS
 import { useCanvas } from "../hook/canvas";
 import { str_unit_to_number } from "../utils/misc";
@@ -40,6 +44,7 @@ const BackgroundSection = ({
   if (height !== undefined) {
     h = height_calc(h, height);
   }
+  
   const bg_img_hd = data_query.bg_hd.childImageSharp.fluid;
 
   return (
