@@ -1,7 +1,13 @@
+/**
+ *  Index 
+ * 2021-2022
+ * v 0.2.0
+ * */
+
 // REACT
 import * as React from "react";
 // GATSBY
-
+import { graphql } from 'gatsby';
 // APP
 import { useWidth } from "../hook/canvas";
 // EIAD
@@ -25,9 +31,13 @@ import "../css/index.css";
 // le jaune #feec04
 
 // markup
-const IndexPage = () => {
+const IndexPage = (props) => {
   const bg_home = QueryHome();
   const bg_trame_bleue = QueryTrameBleue();
+
+  const content_node = props.data.allContentfulHome.nodes[0];
+  const content_slogan = props.data.allContentfulHome.nodes[0].slogan;
+
 
   let height_intro = "320px";
   if (useWidth() < 650) {
@@ -46,10 +56,12 @@ const IndexPage = () => {
       <BackgroundMedia
         height="0.5n"
         data_query={bg_home}
+        gatsby_image_data={bg_home}
         className="bg_img_txt"
         default_color="pink"
       >
-        <Slogan className="slogan" />
+        {/* <Slogan className="slogan"/> */}
+        <Slogan className="slogan" content={content_slogan}/>
       </BackgroundMedia>
       <BackgroundMedia
         height={height_intro}
@@ -57,10 +69,32 @@ const IndexPage = () => {
         className="bg_img"
         default_color="#066ea5"
       >
-        <TextIntro className="text_intro_inside" />
+        <TextIntro className="text_intro_inside" node={content_node}/>
       </BackgroundMedia>
     </Layout>
   );
 };
 
 export default IndexPage;
+
+
+export const content_query = graphql
+`
+query {
+  allContentfulHome {
+    nodes {
+      contenu {
+        id
+        contenu
+        childMarkdownRemark {
+          html
+          frontmatter {
+            title
+          }
+        }
+      }
+      slogan
+    }
+  }
+}
+`

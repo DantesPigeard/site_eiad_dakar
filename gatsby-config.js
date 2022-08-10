@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 module.exports = {
   siteMetadata: {
     siteUrl: `https://www.eiad-dakar.com`,
@@ -71,6 +73,17 @@ module.exports = {
         theme_color: `#a2466c`,
         display: `standalone`,
         icon: `media/icon.png`,
+      },
+    },
+
+    // CONTENTFUL
+    {
+      resolve: `gatsby-source-contentful`,
+      options: {
+        spaceId: process.env.CONTENTFUL_SPACE_ID,
+        // Learn about environment variables: https://gatsby.dev/env-vars
+        accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        enableTags: true,
       },
     },
   ],

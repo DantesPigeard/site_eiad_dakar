@@ -1,3 +1,8 @@
+/**
+ * Subscribe
+ * v 0.2.0
+ * 2021-2022
+ */
 import React from "react";
 
 // gatsby
@@ -9,23 +14,20 @@ import { SelectMD } from "../components/markdown";
 
 export default function Inscription() {
   const data = useStaticQuery(graphql`
-    query {
-      allMarkdownRemark(
-        filter: { fileAbsolutePath: { regex: "/inscription/" } }
-      ) {
-        edges {
-          node {
-            id
+  query {
+    allContentfulSubscribe {
+      nodes {
+        contenu {
+          childMarkdownRemark {
             html
             frontmatter {
               title
-              author
-              date
             }
           }
         }
       }
     }
+  }
   `);
 
   if (data !== undefined) {
@@ -33,9 +35,7 @@ export default function Inscription() {
       <>
         <Layout>
           <div className="md_container">
-            {data.allMarkdownRemark.edges.map(({ node }) => (
-              <SelectMD className="md_style" node={node} />
-            ))}
+            <SelectMD className="md_style" node={data.allContentfulSubscribe.nodes[0].contenu.childMarkdownRemark} />
           </div>
           <Partenaires />
         </Layout>
@@ -49,3 +49,4 @@ export default function Inscription() {
     );
   }
 }
+

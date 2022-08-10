@@ -1,5 +1,9 @@
+/**
+ * Text Intro
+ * v 0.2.0
+ * 2021-2022
+ */
 import * as React from "react";
-import { graphql, useStaticQuery } from "gatsby";
 // APP
 import { SelectMD } from "./markdown";
 
@@ -13,43 +17,20 @@ function get_style(background_color, text_color, text_size, padding) {
   };
 }
 
+
 export function TextIntro({
   background_color,
   text_color,
   text_size,
   padding,
   className,
+  node,
 }) {
   const style = get_style(background_color, text_color, text_size, padding);
 
-  const data = useStaticQuery(
-    graphql`
-      query {
-        allMarkdownRemark(filter: { fileAbsolutePath: { regex: "/intro/" } }) {
-          edges {
-            node {
-              id
-              html
-              frontmatter {
-                title
-                author
-                date
-              }
-            }
-          }
-        }
-      }
-    `
-  );
-
-  if (data !== undefined) {
     return (
       <div>
-        {data.allMarkdownRemark.edges.map(({ node }) => (
-          <SelectMD className={className} style={style} node={node} />
-        ))}
-        {/* {data_text.file.childPlainText.content} */}
+        <SelectMD className={className} style={style} node={node.contenu.childMarkdownRemark} />
       </div>
     );
-  } else return null;
 }
