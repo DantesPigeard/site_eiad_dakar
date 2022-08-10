@@ -8,9 +8,6 @@ import React from "react";
 import styled from "styled-components";
 // GATSBY
 import BackgroundImage from "gatsby-background-image";
-import { getImage, GatsbyImage } from "gatsby-plugin-image"
-import { convertToBgImage } from "gbimage-bridge";
-
 
 // UTILS
 import { useCanvas } from "../hook/canvas";
