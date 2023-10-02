@@ -45,6 +45,7 @@ const BackgroundSection = ({
   const bg_img_hd = data_query.bg_hd.childImageSharp.fluid;
 
   return (
+
     <BackgroundImage
       Tag="section"
       fluid={bg_img_hd}
