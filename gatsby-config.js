@@ -25,14 +25,14 @@ module.exports = {
     },
 
     // TEXT
-    `gatsby-transformer-plaintext`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `text`,
-        path: `./media/`,
-      },
-    },
+    // `gatsby-transformer-plaintext`,
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `text`,
+    //     path: `./media/`,
+    //   },
+    // },
 
     // MARKDOWN
     // https://dev.to/alexalexyang/how-to-use-markdown-in-pages-in-gatsby-5dee
